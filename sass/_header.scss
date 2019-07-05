@@ -2,6 +2,7 @@
     grid-column: 1 /-1;
     position: relative;
     background-color: $color-black;
+    z-index: 500;
     //background-image: linear-gradient(to right bottom, rgba($color-black, .2),  rgba($color-black, .6)),  url(../image/test-tango-landing-4.png);
     background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/test-tango-landing-4.png);
     //background-image: url(../image/test-tango-landing-4.png);
@@ -10,7 +11,7 @@
     background-attachment: fixed;
     clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 65vh);
     display: grid;
-
+    text-align: center;
     h3 {
         color: $color-beige;
         text-transform: capitalize;  
@@ -30,13 +31,12 @@
         z-index: 1000;
         top: 10%;
         right: 5%;
-        //background-color: rgba($color-beige, .4);
-        grid-gap: 3rem;
-        height: 50%;
+        grid-gap: 2.5rem;
+        height: 70%;
         width: 30%;
         
         align-content: center;
-
+        justify-content: center;
         justify-items: center;
         align-items: center;
         text-align: center;
@@ -44,18 +44,22 @@
 
     &__logo {
         width: 25rem;
-        
-        // position: absolute;
-        // top: 20%;
-        // right: 5%;
-        //background-color: antiquewhite;
-        padding:2rem;
-        border-radius: 3px;
+
         opacity: .9;
     }
-    &__title {
-       
+    &__sub {
+      
+       color: $color-beige;
+       text-transform: capitalize;
+       & span {
+        
+           padding: 1rem 1.5rem;
+           -webkit-box-decoration-break: clone;
+           box-decoration-break: clone;
+       }
+        
     }
+    
     & h1 {
         color: $color-beige;
         text-transform: uppercase;

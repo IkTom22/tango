@@ -1,6 +1,24 @@
 .about {
-    grid-column: 1 /-1;
+    grid-column: full-start /col-start 7; 
+    grid-row: 2/3;
     background-color: $color-black-red;
+    z-index: 400;
+    clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
+    margin-top: -37vh;
     
-    margin-top: -35vh;
+    display: grid;
+    
+    grid-gap: 2.5rem;
+    align-content: center;
+    color: $color-beige;
+    //@include centering;
+
+    &__title {
+
+    }
+    &__content{
+
+    }
+    
 }
+
