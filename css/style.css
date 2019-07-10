@@ -10,7 +10,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.6;
   font-family: "Roboto Condensed", sans-serif;
@@ -19,7 +19,7 @@ body {
 .container {
   width: 100vw;
   display: grid;
-  grid-template-rows: 100vh repeat(2, 75vh) repeat(3, min-content);
+  grid-template-rows: 100vh repeat(2, 75vh) 50vh min-content;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
@@ -42,6 +42,16 @@ body {
 .sub-3 {
   font-family: "Tangerine", cursive;
   font-size: 3.8rem; }
+
+.section__title {
+  width: 60%;
+  color: #fff4c4; }
+  .section__title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: currentColor;
+    width: 60%; }
 
 .section__title {
   text-transform: capitalize; }
@@ -115,9 +125,21 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
   margin-top: -37vh;
   display: grid;
-  grid-gap: 2.5rem;
   align-content: center;
-  color: #fff4c4; }
+  align-items: center;
+  padding-left: 3rem; }
+  .about__main {
+    color: #fff4c4;
+    padding: 15vh 2rem 2rem 2rem; }
+  .about__title {
+    padding-bottom: 5rem; }
+  .about__shape {
+    float: right;
+    width: 100%;
+    height: 75vh;
+    padding-left: 3rem;
+    shape-outside: polygon(0 100%, 100% 0, 100% 100%);
+    shape-margin: 3rem; }
 
 .travel {
   grid-column: col-start 2/ -1;
@@ -130,10 +152,50 @@ body {
   background-position: 99% 15%; }
 
 .lessons {
-  background-color: lime; }
+  background-color: #4d0104;
+  background-image: linear-gradient(rgba(17, 1, 1, 0.7), rgba(17, 1, 1, 0.7)), url(../image/test-tango-landing.png);
+  background-repeat: none;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: #fff4c4;
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  margin-top: -25%;
+  display: grid;
+  grid-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center; }
+  .lessons__title {
+    padding-bottom: 3rem; }
+  .lessons__content {
+    width: 60%; }
 
 .testimonials {
-  background-color: antiquewhite; }
+  background-color: #0a0002;
+  color: #fff4c4;
+  grid-row: 4/5;
+  grid-column: 1/ col-start 7;
+  margin-top: -35vh;
+  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+  display: grid;
+  grid-gap: 5rem;
+  align-content: center;
+  align-items: center;
+  padding-left: 5rem; }
+
+.contact {
+  grid-row: 4/5;
+  grid-column: col-start 2/ -1;
+  margin-top: -30vh;
+  background-color: rgba(21, 138, 138, 0.4);
+  background-image: linear-gradient(to bottom right, rgba(215, 25, 33, 0.4), rgba(215, 25, 33, 0.4), rgba(172, 4, 4, 0.9), rgba(21, 138, 138, 0.9)), url(../image/test-tango-landing-6.png);
+  background-position-Y: 85%;
+  background-repeat: no-repeat;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%); }
 
 .footer {
-  background-color: black; }
+  background-color: black;
+  grid-column: 1/-1; }

@@ -1,0 +1,19 @@
+.contact {
+    grid-row: 4/5;
+    grid-column: col-start 2/ -1;
+    margin-top: -30vh;
+    background-color: rgba($color-green-dark, .4);
+    //background-image: linear-gradient(to bottom right, rgba($color-green-dark, .4), rgba($color-green-dark, .4), rgba($color-green-darkest, .9), rgba($color-black-darker, .9)), url(../image/test-tango-landing-6.png);
+    background-image: linear-gradient(to bottom right, 
+                                        rgba($color-red, .4), 
+                                        rgba($color-red, .4), 
+                                        rgba($color-red-deep-dark, .9), 
+                                        rgba($color-green-dark, .9)), 
+                                        url(../image/test-tango-landing-6.png);
+    // @include fixed-background;
+    
+    background-position-Y: 85%;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+
+}

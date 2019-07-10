@@ -1,18 +1,22 @@
 // COLOR VAL
 $color-red: #D71921;
 $color-red-dark: rgb(77, 1, 4);
+$color-red-darkest: rgb(17, 1, 1);
 $color-red-deep: #be0505;
+$color-red-deep-dark: #ac0404;
 
 $color-green-light: #d4e6c9;
 $color-green-mid: #46bda9;
 $color-blue-dark: #077d88;
 $color-green-dark: #158a8a;
+$color-green-darkest: #036161;
 $color-beige: #fff4c4;
 $color-grey: #313438;
 
 $color-black: #231F20;
 $color-black-red: rgb(10, 0, 2);
 $color-black-darker: #000807;
+$color-black-orange: rgb(37, 18, 6);
 //FONT VAL
 
 
@@ -54,7 +58,7 @@ html {
 }
 
 body {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 300;
     line-height: 1.6;
     font-family: $font-body;
@@ -63,7 +67,7 @@ body {
 .container {
     width: 100vw;
     display: grid;
-    grid-template-rows: 100vh repeat(2, 75vh) repeat(3, min-content);
+    grid-template-rows: 100vh repeat(2, 75vh) 50vh min-content;
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     // position: relative;
     

@@ -26,3 +26,11 @@
     font-size: 3.8rem;
     
 }
+.section {  
+    &__title {
+        width: 60%;
+        @include bottom-line;
+        color: $color-beige;
+    }
+
+}

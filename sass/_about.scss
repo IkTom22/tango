@@ -4,21 +4,33 @@
     background-color: $color-black-red;
     z-index: 400;
     clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
+    
     margin-top: -37vh;
-    
     display: grid;
-    
-    grid-gap: 2.5rem;
     align-content: center;
-    color: $color-beige;
-    //@include centering;
-
+    align-items: center;
+    
+    padding-left: 3rem;
+    
+    &__main {
+        color: $color-beige;
+        padding: 15vh 2rem 2rem 2rem;
+    }
     &__title {
+        padding-bottom: 5rem;
 
     }
-    &__content{
-
+    &__shape {
+       
+        float: right;
+        width: 100%;
+        height: 75vh;
+        padding-left: 3rem;
+        shape-outside: polygon(0 100%, 100% 0, 100% 100%); 
+        shape-margin: 3rem ;
     }
+
+   
     
 }
 
