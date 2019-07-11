@@ -15,5 +15,66 @@
     background-position-Y: 85%;
     background-repeat: no-repeat;
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    align-items: center;
+    justify-items: end;
+    justify-content: end;
+    align-content: end;
+    grid-gap: 5rem;
+    padding-right: 8rem;
+    text-align: right;
+    &__title{
+        width: 35%;
+        &::after {
+            width: 100%;
+        }
+    }
+    &__details{
+        // padding-bottom: 2rem;
+        color: $color-beige; 
+        display: grid;
+        grid-gap: 2rem;
+        font-size: 2rem;
+        font-weight: 300;
+        
+        width: 25%;
+    }
+    &__detail{
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-column-gap: 2rem;
+        align-items: center;
+        justify-items: end;
+    
+        
+    }
+    &__icon{
+        width: 3rem;
+        height: 3rem;
+        // margin-left: 9rem;
+        fill: $color-green-light;
+    }
+    &__links{
+        //width: 25%;
+        display: grid;
+        grid-template-columns: minmax(3rem, 1fr) minmax( 6rem, 1fr) repeat(2, minmax(4rem, 1fr));
+        grid-gap: 2rem;
+        align-items: center;
+        justify-items: center;
+        justify-content: end;
+        margin-bottom: 5rem;
+
+    }
+    &__link{
+        width: 3rem;
+        height: 3rem;
+        &--youtube {
+            width: 6rem;
+            height: 3rem;
+        }
+    }
+
 
 }

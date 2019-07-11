@@ -1,7 +1,7 @@
 .lessons {
     //background-color: $color-beige;
     background-color: $color-red-dark;
-    background-image: linear-gradient(rgba($color-red-darkest, .7), rgba($color-red-darkest, .7)), url(../image/test-tango-landing.png);
+    background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/test-tango-landing.png);
     //background-image: linear-gradient(rgba($color-red-dark, .7), rgba($color-red-deep-dark, .7)), url(../image/test-tango-landing.png);
 
     @include fixed-background; 

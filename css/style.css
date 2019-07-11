@@ -144,16 +144,18 @@ body {
 .travel {
   grid-column: col-start 2/ -1;
   grid-row: 2/3;
-  background-color: #d4e6c9;
+  background-color: #5cb0b0;
   clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 35vh);
   margin-top: -25vh;
-  background-image: linear-gradient(rgba(21, 138, 138, 0.5), rgba(21, 138, 138, 0.5)), url(../image/geoffandBeth-lg.png);
+  background-image: linear-gradient(to bottom right, rgba(212, 230, 201, 0.4), rgba(21, 138, 138, 0.6), rgba(53, 182, 182, 0.9)), url(../image/geoffandBeth-lg.png);
   background-repeat: no-repeat;
-  background-position: 99% 15%; }
+  background-position-y: 50%;
+  background-position-x: 96%;
+  background-size: 80%; }
 
 .lessons {
   background-color: #4d0104;
-  background-image: linear-gradient(rgba(17, 1, 1, 0.7), rgba(17, 1, 1, 0.7)), url(../image/test-tango-landing.png);
+  background-image: linear-gradient(rgba(35, 31, 32, 0.4), rgba(17, 1, 1, 0.7)), url(../image/test-tango-landing.png);
   background-repeat: none;
   background-attachment: fixed;
   background-position: center;
@@ -194,7 +196,51 @@ body {
   background-image: linear-gradient(to bottom right, rgba(215, 25, 33, 0.4), rgba(215, 25, 33, 0.4), rgba(172, 4, 4, 0.9), rgba(21, 138, 138, 0.9)), url(../image/test-tango-landing-6.png);
   background-position-Y: 85%;
   background-repeat: no-repeat;
-  clip-path: polygon(0 100%, 100% 0, 100% 100%); }
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: end;
+  justify-content: end;
+  align-content: end;
+  grid-gap: 5rem;
+  padding-right: 8rem;
+  text-align: right; }
+  .contact__title {
+    width: 35%; }
+    .contact__title::after {
+      width: 100%; }
+  .contact__details {
+    color: #fff4c4;
+    display: grid;
+    grid-gap: 2rem;
+    font-size: 2rem;
+    font-weight: 300;
+    width: 25%; }
+  .contact__detail {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 2rem;
+    align-items: center;
+    justify-items: end; }
+  .contact__icon {
+    width: 3rem;
+    height: 3rem;
+    fill: #d4e6c9; }
+  .contact__links {
+    display: grid;
+    grid-template-columns: minmax(3rem, 1fr) minmax(6rem, 1fr) repeat(2, minmax(4rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+    justify-content: end;
+    margin-bottom: 5rem; }
+  .contact__link {
+    width: 3rem;
+    height: 3rem; }
+    .contact__link--youtube {
+      width: 6rem;
+      height: 3rem; }
 
 .footer {
   background-color: black;
