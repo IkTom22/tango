@@ -22,11 +22,11 @@
     justify-items: end;
     justify-content: end;
     align-content: end;
-    grid-gap: 5rem;
+    grid-gap: 4rem;
     padding-right: 8rem;
     text-align: right;
     &__title{
-        width: 35%;
+        width: 30%;
         &::after {
             width: 100%;
         }
@@ -38,8 +38,9 @@
         grid-gap: 2rem;
         font-size: 2rem;
         font-weight: 300;
-        
-        width: 25%;
+        letter-spacing:.2rem;
+    
+        width: 27%;
     }
     &__detail{
         display: grid;
@@ -47,33 +48,38 @@
         grid-column-gap: 2rem;
         align-items: center;
         justify-items: end;
-    
+       
         
     }
     &__icon{
         width: 3rem;
         height: 3rem;
         // margin-left: 9rem;
-        fill: $color-green-light;
+        fill: rgba($color-beige, .7);
     }
     &__links{
-        //width: 25%;
+        width: 27%;
         display: grid;
         grid-template-columns: minmax(3rem, 1fr) minmax( 6rem, 1fr) repeat(2, minmax(4rem, 1fr));
         grid-gap: 2rem;
         align-items: center;
-        justify-items: center;
-        justify-content: end;
+        justify-items: end;
+        justify-content: center;
         margin-bottom: 5rem;
 
     }
     &__link{
         width: 3rem;
         height: 3rem;
+        // fill: rgba($color-black-darker, .7);
+        fill: rgba($color-beige, .7);
         &--youtube {
             width: 6rem;
             height: 3rem;
+            fill: rgba($color-beige, .7);
+            
         }
+
     }
 
 

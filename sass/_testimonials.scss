@@ -9,13 +9,70 @@
     grid-gap: 5rem;
     align-content: center;
     align-items: center;
-    padding-left: 5rem;
+    // padding-left: 5rem;
+    position: relative;
+//     .section {  
+//     &__title {
+//         width: 100%;
+//         @include bottom-line;
+//     }
+// }
+    &__main{
+        width: 70%;
+        padding-left: 5rem;
+        padding-top: 15%;
+        
+        @include quote;
+        &::before {
+            font-size: 70rem;
+            top: -35%;
+            left: -2%;
+            transform: rotate(-15deg);
+        }
+    }
+
+    &__title {
+        margin-bottom: 5rem;
+      
+        
+    }
+
+    &__shape {
+        float: right;
+        width: 100%;
+        height: 75vh;
+        shape-outside: polygon(27.5% 100%, 100% 42%, 100% 100%);
+        shape-margin: 4rem;
+    }
 
     &__content {
-
+        
+        font-style: italic;
+        &--title{
+            margin-bottom: 2rem;
+        }
         &--p {
 
+        }
+        &--name {
+            display: grid;
+            align-items: center;
+            grid-template-columns: 10rem max-content;
+            grid-gap: 1rem;
+            &::before{
+                content: "";
+                display: block;
+                height: 1px;
+                width: 10rem;
+                background-color: $color-beige;
+            }
         }
     }
 
 }
+// .section {  
+//     &__title {
+//         width: 100%;
+//         @include bottom-line;
+//     }
+// }

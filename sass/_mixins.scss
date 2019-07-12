@@ -14,8 +14,18 @@
     &::after {
         content: "";
         display: block;
-        height: 3px;
+        height: 2px;
         background-color: currentColor;
         width: 60%;     
+    }
+}
+
+@mixin quote {
+    &::before {
+        content: "\0201c";
+        position: absolute;
+        color: rgba($color-green-mid, .5);
+        font-family: serif;
+        z-index: -1;
     }
 }
