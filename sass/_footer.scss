@@ -1,4 +1,17 @@
 .footer{
-    background-color: black;
+    background-color:black;
     grid-column: 1/-1;
+    grid-row: 5 /-1;
+    height: fit-content;
+    //margin-top: 50vh;
+    &__logo{
+        & img {
+            width: 8rem;
+        }
+
+        &--text{
+
+        }
+    }
+
 }

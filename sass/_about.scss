@@ -4,11 +4,12 @@
     background-color: $color-black-red;
     z-index: 400;
     clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
-    
     margin-top: -37vh;
+    // padding-top: -37vh;
     display: grid;
     align-content: center;
     align-items: center;
+    // margin-bottom: -37vh;
     
     padding-left: 3rem;
     
