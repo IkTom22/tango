@@ -1,10 +1,11 @@
 .header {
     grid-column: 1 /-1;
+    grid-row: 1 / 4;
     position: relative;
     background-color: $color-black;
     z-index: 500;
     //background-image: linear-gradient(to right bottom, rgba($color-black, .2),  rgba($color-black, .6)),  url(../image/test-tango-landing-4.png);
-    background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/test-tango-landing-4.png);
+    background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_lg.jpg);
     //background-image: url(../image/test-tango-landing-4.png);
     background-size: cover;
     background-position: bottom;

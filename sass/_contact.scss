@@ -1,32 +1,44 @@
 .contact {
-    grid-row: 4/5;
-    grid-column: col-start 2/ -1;
-    margin-top: -30vh;
+    grid-row: 10/ -1;
+    grid-column: 1/ -1;
+    margin-top: -5vh;
     background-color: rgba($color-green-dark, .4);
     //background-image: linear-gradient(to bottom right, rgba($color-green-dark, .4), rgba($color-green-dark, .4), rgba($color-green-darkest, .9), rgba($color-black-darker, .9)), url(../image/test-tango-landing-6.png);
     background-image: linear-gradient(to bottom right, 
                                         rgba($color-red, .4), 
-                                        rgba($color-red, .4), 
+                                        rgba($color-red-deep-dark, .4), 
                                         rgba($color-red-deep-dark, .9), 
                                         rgba($color-green-dark, .9)), 
-                                        url(../image/test-tango-landing-6.png);
+                                        url(../image/tango-contct_lg.jpg);
     // @include fixed-background;
     
-    background-position-Y: 85%;
+    background-position-Y: 80%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
+    // background-position: bottom;
+    background-size: cover;
     clip-path: polygon(0 100%, 100% 0, 100% 100%);
+
     display: grid;
-    grid-template-columns: 1fr;
-    
-    align-items: center;
+    grid-template-columns: 50vw 1fr;
+
+    align-items: end;
     justify-items: end;
     justify-content: end;
     align-content: end;
     grid-gap: 4rem;
+    padding-bottom: 5rem;
     padding-right: 8rem;
     text-align: right;
+
+    &__main {
+        grid-column: 2 /3;
+        display: grid;
+        grid-gap: 5rem;
+        align-items: end;
+    }
     &__title{
-        width: 30%;
+        width: 100%;
         &::after {
             width: 100%;
         }
@@ -39,14 +51,13 @@
         font-size: 2rem;
         font-weight: 300;
         letter-spacing:.2rem;
-    
-        width: 27%;
+        width: 100%;
     }
     &__detail{
         display: grid;
         grid-template-columns: min-content 1fr;
         grid-column-gap: 2rem;
-        align-items: center;
+        align-items: end;
         justify-items: end;
        
         
@@ -58,14 +69,15 @@
         fill: rgba($color-beige, .7);
     }
     &__links{
-        width: 27%;
+        width: 100%;
         display: grid;
         grid-template-columns: minmax(3rem, 1fr) minmax( 6rem, 1fr) repeat(2, minmax(4rem, 1fr));
         grid-gap: 2rem;
-        align-items: center;
+        align-items: end;
         justify-items: end;
-        justify-content: center;
-        margin-bottom: 5rem;
+        justify-content: end;
+        align-content: end;
+        // margin-bottom: 5rem;
 
     }
     &__link{
@@ -82,5 +94,22 @@
 
     }
 
-
+}
+.footer {
+    grid-column: 1 /2;
+    grid-row: 1/2;
+    align-self: end;
+    justify-self: center;
+    color: $color-beige;
+    //border-right: 1px solid rgba($color-beige, .5);
+    padding-left: 5rem;
+    &__logo{
+        & img {
+            width: 8rem;
+            opacity: .6;
+        }
+    }
+    &__copyright{
+        color: rgba($color-beige, .6);
+    }
 }

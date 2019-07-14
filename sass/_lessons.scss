@@ -1,22 +1,27 @@
 .lessons {
     //background-color: $color-beige;
     background-color: $color-red-dark;
-    background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/test-tango-landing.png);
+    background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_lg.jpg);
     //background-image: linear-gradient(rgba($color-red-dark, .7), rgba($color-red-deep-dark, .7)), url(../image/test-tango-landing.png);
 
     @include fixed-background; 
     color: $color-beige;
-    grid-row: 3/4;
+    grid-row: 5/9;
     grid-column: 1/-1;
-    margin-top: -25%;
+    margin-top: -5%;
+    margin-bottom: -10%;
     display: grid;
     grid-gap: 2rem;
     @include centering;
 
     &__title {
+        
         padding-bottom: 3rem;
     }
     &__content {
         width: 60%;
+        &:last-child{
+            padding-bottom: 10rem;
+        }  
     }
 }

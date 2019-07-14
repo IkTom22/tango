@@ -63,13 +63,17 @@ body {
     line-height: 1.6;
     font-family: $font-body;
     font-weight: 300;
+    background-color:$color-green-darkest;
+    
 }
 .container {
     width: 100vw;
     display: grid;
-    grid-template-rows: 100vh repeat(2, 75vh) 50vh auto;
+    //grid-template-rows: 100vh repeat(2, 75vh) 50vh auto;
+    grid-template-rows: repeat(12, 33vh);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     // position: relative;
+    overflow: hidden;
     
 }
 

@@ -1,10 +1,10 @@
 .testimonials {
     background-color: $color-black-red;
     color: $color-beige;
-    grid-row: 4/5;
-    grid-column: 1/ col-start 7;
-    margin-top: -35vh;
-    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+    grid-row: 8/ 11;
+    grid-column: 1/ -1;
+    //margin-top: -35vh;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 100%);
 
     display: grid;
     grid-gap: 5rem;
@@ -31,7 +31,7 @@
         @include quote;
         &::before {
             font-size: 70rem;
-            top: -35%;
+            top: -25%;
             left: -2%;
             transform: rotate(-15deg);
         }
@@ -47,29 +47,18 @@
         shape-margin: 4rem;
     }
 
-    // &__box {
-    //     float: left;
-    //     display: grid;
-    //     height: 75vh;
-    //     width: 100%;
-    //     grid-template-columns: 1fr 5rem;
-    //     grid-template-rows: 20vh 60vh 20vh;
-    //     grid-gap: 5rem;
-    //     align-items: center;
-    //     align-content: center;   
-    // }   
     &__title {
         margin-bottom: 5rem; 
         
         // grid-column: 2 /-1;
         // grid-row: 1/2;
     }
-    &__voice {
+    &__voice {  
         
         font-style: italic;
         opacity: 0;
-        transform: scale(.7) rotate(0);
-        float: left;
+        transform: scale(.7) translateX(-100%);
+        // float: left;
         // grid-column: 2 /3;
         // grid-row: 2/3;
         position: absolute;
@@ -77,13 +66,12 @@
         &--title{
             margin-bottom: 2rem;
         }
-        &--p {
 
-        }
         &--name {
             display: grid;
             align-items: center;
             grid-template-columns: 10rem max-content;
+            padding-top: 3rem;
             grid-gap: 1rem;
             &::before{
                 content: "";
@@ -126,11 +114,11 @@
 @keyframes slideIn {
     0%{
         opacity: 0;
-        transform: scale(.7) rotate(360deg);
+        transform: scale(.7) translateX(-100%);
     }
     1% {
         opacity: 1;
-        transform: scale(1) rotate(0);
+        transform: scale(1) translateX(0);
     }
     16.5% {
         opacity: 1;
@@ -138,11 +126,10 @@
     }
     17% {
         opacity: 0;
-        transform: scale(.2) rotate(0);
+        transform: scale(.2) translateX(150%);
     }
     100% {
         opacity: 0;
-        transform: scale(.7) rotate(0);
+        transform: scale(.7) translateX(-100%);
     }
 }
-
