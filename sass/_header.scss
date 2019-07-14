@@ -4,15 +4,17 @@
     position: relative;
     background-color: $color-black;
     z-index: 500;
-    //background-image: linear-gradient(to right bottom, rgba($color-black, .2),  rgba($color-black, .6)),  url(../image/test-tango-landing-4.png);
+    
     background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_lg.jpg);
-    //background-image: url(../image/test-tango-landing-4.png);
+ 
     background-size: cover;
     background-position: bottom;
     background-attachment: fixed;
     clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 65vh);
     display: grid;
     text-align: center;
+
+
     h3 {
         color: $color-beige;
         text-transform: capitalize;  
@@ -24,6 +26,10 @@
         font-size: 16rem;
         font-family: $font-stroke-1;
         color: rgba($color-beige, .8);
+
+        @include iPproL{
+            transform: translate(5%, 45%) rotate(-10deg);
+        }
     }
     &__mainbox{
 

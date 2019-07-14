@@ -29,3 +29,74 @@
         z-index: -1;
     }
 }
+
+// RESPONSIVE BREAKPOINTS
+$iPp-w: 85.37em; //1366px / 16 /* iPad pro landscape Width*/
+$iPp-h: 64em; // 1024px /* iPad pro landscape Height */
+$desktop-w: 64em; // 1024px
+$lgPhone: 51.5em; // 824px
+$mPhone: 48em; //768px
+$sPhone: 35.5em; //568px
+$xsPhone: 23.43em;// 375px
+$p2: 45.75em; //731px
+$other: 30em; //480px
+
+// $bp-large: 51.5em; // 824px
+// $bp-medium: 50em; // 800pxs
+// $bp-small: 37.5em; //600px
+// $bp-xsmall: 28.125em; //450px
+// $bp-smallest: 25em; //400px
+
+@mixin iPproL {
+    @media only screen and (min-height: $iPp-h) and (max-width: $iPp-w){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (max-width: $desktop){
+        @content;
+    }
+}
+
+@mixin iPadPrP {
+    @media only screen and (min-height: $iPp-w) and (max-width: $iPp-h){
+        @content;
+    }
+}
+
+@mixin lgPhone {
+    @media only screen and (max-width: $lgPhone) {
+        @content;
+    }
+}
+
+@mixin mPhone {
+    @media only xcreen and (max-width: $mPhone){
+        @content;
+    }
+}
+
+@mixin iPadP {
+    @media only screen and (min-height:$iPp-h) and (max-width: $mPhone) {
+        @content;
+    }
+}
+
+@mixin sPhone {
+    @media only screen and (max-width: $sPhone){
+        @content;
+    }
+}
+
+@mixin lgPhoneP {
+    @media only screen and (min-height: $p2) and (max-height: $lgPhone) and (max-width: $other){
+        @content;
+    }
+}
+
+@mixin other {
+    @media only screen and (min-height: $other) and (max-width: $xsPhone) {
+        @content;
+    }
+}

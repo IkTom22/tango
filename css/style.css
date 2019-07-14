@@ -15,7 +15,8 @@ body {
   line-height: 1.6;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 300;
-  background-color: #036161; }
+  background-color: #036161;
+  overflow-x: hidden; }
 
 .container {
   width: 100vw;
@@ -91,6 +92,9 @@ body {
     font-size: 16rem;
     font-family: "Great Vibes", cursive;
     color: rgba(255, 244, 196, 0.8); }
+    @media only screen and (min-height: 64em) and (max-width: 85.37em) {
+      .header__name {
+        transform: translate(5%, 45%) rotate(-10deg); } }
   .header__mainbox {
     display: grid;
     position: absolute;
