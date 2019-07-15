@@ -12,4 +12,9 @@
     background-position-x: 96%;
     background-size: 80%;
     // background-position: center;
+
+    @media #{$ipp-land} {
+        background-position-y: 22%;
+        background-size: 100%;
+    }
 }

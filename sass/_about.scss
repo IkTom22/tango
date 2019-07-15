@@ -5,7 +5,6 @@
     z-index: 400;
     clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
     margin-top: -5vh;
-    // padding-top: -37vh;
     display: grid;
     align-content: center;
     align-items: center;
@@ -20,6 +19,10 @@
     &__title {
         padding-top: 2rem;
         padding-bottom: 5rem;
+        
+        @media #{$ipp-land} {
+            padding-top: 15rem;
+        }
 
     }
     &__shape {

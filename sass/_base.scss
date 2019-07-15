@@ -34,18 +34,6 @@ $font-stroke-2: 'Tangerine', cursive;
 
 
 
-
-
-// RESPONSIVE BREAKPOINTS
-$bp-iPp-LW: 85.37em; //1366px / 16 /* iPad pro landscape Width*/
-$bp-iPp-LH: 64em; // 1024px /* iPad pro landscape Height */
-$bp-large: 62.5em; // 1000px / 16
-$bp-medium: 50em; // 800pxs
-$bp-small: 37.5em; //600px
-$bp-xsmall: 28.125em; //450px
-$bp-smallest: 25em; //400px
-
-
 *,
 *::before,
 *::after {
@@ -56,10 +44,17 @@ $bp-smallest: 25em; //400px
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10/16=0.625
+
+    
 }
 
 body {
     font-size: 1.7rem;
+
+    @media #{$ipp-land} {
+        font-size: 2rem;
+    }
+
     font-weight: 300;
     line-height: 1.6;
     font-family: $font-body;
@@ -75,6 +70,8 @@ body {
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     // position: relative;
     overflow: hidden;
+
+
     
 }
 

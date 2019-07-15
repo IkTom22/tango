@@ -17,6 +17,9 @@ body {
   font-weight: 300;
   background-color: #036161;
   overflow-x: hidden; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    body {
+      font-size: 2rem; } }
 
 .container {
   width: 100vw;
@@ -35,6 +38,9 @@ body {
 .heading-2 {
   font-size: 4rem;
   letter-spacing: .3rem; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .heading-2 {
+      font-size: 4.2rem; } }
 
 .heading-3 {
   font-size: 3.5rem; }
@@ -47,6 +53,9 @@ body {
 .sub-3 {
   font-family: "Tangerine", cursive;
   font-size: 3.8rem; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .sub-3 {
+      font-size: 4rem; } }
 
 .section__title {
   width: 60%;
@@ -92,9 +101,9 @@ body {
     font-size: 16rem;
     font-family: "Great Vibes", cursive;
     color: rgba(255, 244, 196, 0.8); }
-    @media only screen and (min-height: 64em) and (max-width: 85.37em) {
+    @media (min-height: 1024px) and (max-width: 1366px) {
       .header__name {
-        transform: translate(5%, 45%) rotate(-10deg); } }
+        transform: translate(5%, 95%) rotate(-10deg); } }
   .header__mainbox {
     display: grid;
     position: absolute;
@@ -116,15 +125,19 @@ body {
     color: #fff4c4;
     text-transform: capitalize; }
     .header__sub span {
-      padding: 1rem 1.5rem;
-      -webkit-box-decoration-break: clone;
-      box-decoration-break: clone; }
+      padding: 1rem 1.5rem; }
+      @media (min-height: 1024px) and (max-width: 1366px) {
+        .header__sub span {
+          font-size: 3.5rem; } }
   .header h1 {
     color: #fff4c4;
     text-transform: uppercase;
     text-shadow: 0.4rem 0.4rem 0.1rem #231F20; }
     .header h1:nth-child(2) {
       border-top: 3px solid #fff4c4; }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .header h1 {
+        letter-spacing: .3rem; } }
 
 .about {
   grid-column: full-start /col-start 8;
@@ -143,6 +156,9 @@ body {
   .about__title {
     padding-top: 2rem;
     padding-bottom: 5rem; }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .about__title {
+        padding-top: 15rem; } }
   .about__shape {
     float: right;
     width: 100%;
@@ -161,6 +177,10 @@ body {
   background-position-y: 50%;
   background-position-x: 96%;
   background-size: 80%; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .travel {
+      background-position-y: 22%;
+      background-size: 100%; } }
 
 .lessons {
   background-color: #4d0104;
@@ -221,6 +241,13 @@ body {
       top: -25%;
       left: -2%;
       transform: rotate(-15deg); }
+      @media (min-height: 1024px) and (max-width: 1366px) {
+        .testimonials__main::before {
+          top: 5%;
+          left: -2%; } }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .testimonials__main {
+        padding-top: 40%; } }
   .testimonials__shape {
     float: right;
     width: 100%;
@@ -234,6 +261,9 @@ body {
     opacity: 0;
     transform: scale(0.7) translateX(-100%);
     position: absolute; }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .testimonials__voice {
+        font-size: 2.2rem; } }
     .testimonials__voice--title {
       margin-bottom: 2rem; }
     .testimonials__voice--name {

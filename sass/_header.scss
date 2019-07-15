@@ -14,11 +14,12 @@
     display: grid;
     text-align: center;
 
-
+ 
     h3 {
         color: $color-beige;
         text-transform: capitalize;  
     }
+
     &__name {
         position: absolute;
         z-index: 500;
@@ -27,12 +28,11 @@
         font-family: $font-stroke-1;
         color: rgba($color-beige, .8);
 
-        @include iPproL{
-            transform: translate(5%, 45%) rotate(-10deg);
+        @media #{$ipp-land} {
+            transform: translate(5%, 95%) rotate(-10deg);
         }
     }
     &__mainbox{
-
         display: grid;
         position: absolute;
         z-index: 1000;
@@ -47,11 +47,11 @@
         justify-items: center;
         align-items: center;
         text-align: center;
+
     }
 
     &__logo {
         width: 25rem;
-
         opacity: .9;
     }
     &__sub {
@@ -59,11 +59,15 @@
        color: $color-beige;
        text-transform: capitalize;
        & span {
-        
            padding: 1rem 1.5rem;
-           -webkit-box-decoration-break: clone;
-           box-decoration-break: clone;
+        //    -webkit-box-decoration-break: clone;
+        //    box-decoration-break: clone;
+
+        @media #{$ipp-land} {
+            font-size: 3.5rem;
+            }
        }
+      
         
     }
     
@@ -74,6 +78,9 @@
         &:nth-child(2) {
             border-top: 3px solid $color-beige;
             
+        }
+        @media #{$ipp-land} {
+            letter-spacing: .3rem;
         }
     }
 }

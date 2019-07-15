@@ -10,6 +10,11 @@
     @extend %heading;
     font-size: 4rem;
     letter-spacing: .3rem;
+
+    @media #{$ipp-land} {
+        font-size: 4.2rem;
+        }
+    
 }
 
 .heading-3{
@@ -25,6 +30,10 @@
 .sub-3 {
     font-family: $font-stroke-2;
     font-size: 3.8rem;
+
+    @media #{$ipp-land} {
+        font-size: 4rem; 
+    }
     
 }
 
