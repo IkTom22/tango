@@ -1,15 +1,17 @@
 .fees{
     background-color:$color-green-darkest;
-    background-image: linear-gradient(rgba($color-green-dark, .5), rgba($color-green-dark, .5)), url(../image/tango-milonga-lg.jpg);
+    background-image: linear-gradient(rgba($color-green-dark, .5), rgba($color-green-dark, .5)), url(../image/tango-milonga-md.jpg);
     background-size: 120%;
     background-position-x: 190%;
     background-position-y: -20%;
     background-repeat: no-repeat;
+
+    @media #{$ipp-land} {
+        background-size: 200%;
+        background-position-x: 80%;
+        padding-top: 8%;
+        }
     
-
-
-
-
     grid-column: 1/-1;
     grid-row: 11 /-1;
     height: fit-content;

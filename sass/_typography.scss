@@ -31,8 +31,9 @@
     font-family: $font-stroke-2;
     font-size: 3.8rem;
 
-    @media #{$ipp-land} {
-        font-size: 4rem; 
+    @media #{$desktop} {
+        
+        font-size: 3rem;
     }
     
 }

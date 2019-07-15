@@ -8,6 +8,9 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    html {
+      font-size: 68%; } }
 
 body {
   font-size: 1.7rem;
@@ -17,9 +20,6 @@ body {
   font-weight: 300;
   background-color: #036161;
   overflow-x: hidden; }
-  @media (min-height: 1024px) and (max-width: 1366px) {
-    body {
-      font-size: 2rem; } }
 
 .container {
   width: 100vw;
@@ -53,9 +53,9 @@ body {
 .sub-3 {
   font-family: "Tangerine", cursive;
   font-size: 3.8rem; }
-  @media (min-height: 1024px) and (max-width: 1366px) {
+  @media (max-width: 1024px) {
     .sub-3 {
-      font-size: 4rem; } }
+      font-size: 3rem; } }
 
 .section__title {
   width: 60%;
@@ -103,7 +103,11 @@ body {
     color: rgba(255, 244, 196, 0.8); }
     @media (min-height: 1024px) and (max-width: 1366px) {
       .header__name {
-        transform: translate(5%, 95%) rotate(-10deg); } }
+        transform: translate(5%, 95%) rotate(-15deg);
+        font-size: 15rem; } }
+    @media (max-width: 1024px) {
+      .header__name {
+        font-size: 12rem; } }
   .header__mainbox {
     display: grid;
     position: absolute;
@@ -118,9 +122,17 @@ body {
     justify-items: center;
     align-items: center;
     text-align: center; }
+    @media (max-width: 1024px) {
+      .header__mainbox {
+        grid-gap: 2rem;
+        width: 30%; } }
   .header__logo {
     width: 25rem;
     opacity: .9; }
+    @media (max-width: 1024px) {
+      .header__logo {
+        width: 10rem;
+        text-align: center; } }
   .header__sub {
     color: #fff4c4;
     text-transform: capitalize; }
@@ -335,6 +347,9 @@ body {
   padding-bottom: 5rem;
   padding-right: 8rem;
   text-align: right; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .contact {
+      grid-row-gap: 10rem; } }
   .contact__main {
     grid-column: 2 /3;
     display: grid;
@@ -352,6 +367,9 @@ body {
     font-weight: 300;
     letter-spacing: .2rem;
     width: 100%; }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .contact__details {
+        font-size: 2.3rem; } }
   .contact__detail {
     display: grid;
     grid-template-columns: min-content 1fr;
@@ -362,6 +380,10 @@ body {
     width: 3rem;
     height: 3rem;
     fill: rgba(255, 244, 196, 0.7); }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .contact__icon {
+        width: 3.5rem;
+        height: 3.5rem; } }
   .contact__links {
     width: 100%;
     display: grid;
@@ -379,6 +401,14 @@ body {
       width: 6rem;
       height: 3rem;
       fill: rgba(255, 244, 196, 0.7); }
+      @media (min-height: 1024px) and (max-width: 1366px) {
+        .contact__link--youtube {
+          width: 7rem;
+          height: 3.5rem; } }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .contact__link {
+        width: 3.5rem;
+        height: 3.5rem; } }
 
 .footer {
   grid-column: 1 /2;
@@ -387,6 +417,11 @@ body {
   justify-self: center;
   color: #fff4c4;
   padding-left: 5rem; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .footer {
+      grid-column: 2 /3;
+      grid-row: 2/3;
+      justify-self: end; } }
   .footer__logo img {
     width: 8rem;
     opacity: .6; }
@@ -395,7 +430,7 @@ body {
 
 .fees {
   background-color: #036161;
-  background-image: linear-gradient(rgba(21, 138, 138, 0.5), rgba(21, 138, 138, 0.5)), url(../image/tango-milonga-lg.jpg);
+  background-image: linear-gradient(rgba(21, 138, 138, 0.5), rgba(21, 138, 138, 0.5)), url(../image/tango-milonga-md.jpg);
   background-size: 120%;
   background-position-x: 190%;
   background-position-y: -20%;
@@ -412,6 +447,11 @@ body {
   align-content: start;
   width: 100%;
   height: 150%; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .fees {
+      background-size: 200%;
+      background-position-x: 80%;
+      padding-top: 8%; } }
   .fees__content {
     list-style: none;
     align-self: start; }

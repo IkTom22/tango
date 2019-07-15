@@ -44,16 +44,15 @@ $font-stroke-2: 'Tangerine', cursive;
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 10/16=0.625
+    @media #{$ipp-land} {
+        font-size: 68%;
+    }
 
     
 }
 
 body {
     font-size: 1.7rem;
-
-    @media #{$ipp-land} {
-        font-size: 2rem;
-    }
 
     font-weight: 300;
     line-height: 1.6;

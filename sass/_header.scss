@@ -28,9 +28,15 @@
         font-family: $font-stroke-1;
         color: rgba($color-beige, .8);
 
+
         @media #{$ipp-land} {
-            transform: translate(5%, 95%) rotate(-10deg);
+            transform: translate(5%, 95%) rotate(-15deg);
+            font-size: 15rem;
         }
+        @media #{$desktop} {
+            font-size: 12rem;
+        }
+        
     }
     &__mainbox{
         display: grid;
@@ -39,6 +45,10 @@
         top: 10%;
         right: 5%;
         grid-gap: 2.5rem;
+        @media #{$desktop} {
+            grid-gap: 2rem;
+            width: 30%;
+        }
         height: 70%;
         width: 30%;
         
@@ -53,6 +63,10 @@
     &__logo {
         width: 25rem;
         opacity: .9;
+        @media #{$desktop} {
+            width: 10rem;
+            text-align: center;
+        }
     }
     &__sub {
       
@@ -65,7 +79,7 @@
 
         @media #{$ipp-land} {
             font-size: 3.5rem;
-            }
+        }
        }
       
         

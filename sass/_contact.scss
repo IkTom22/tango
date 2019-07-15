@@ -21,6 +21,10 @@
 
     display: grid;
     grid-template-columns: 50vw 1fr;
+    @media #{$ipp-land} {
+        grid-row-gap: 10rem;
+    }
+
 
     align-items: end;
     justify-items: end;
@@ -52,6 +56,10 @@
         font-weight: 300;
         letter-spacing:.2rem;
         width: 100%;
+        @media #{$ipp-land} {
+            font-size: 2.3rem;
+        }
+
     }
     &__detail{
         display: grid;
@@ -67,6 +75,11 @@
         height: 3rem;
         // margin-left: 9rem;
         fill: rgba($color-beige, .7);
+
+        @media #{$ipp-land} {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
     }
     &__links{
         width: 100%;
@@ -89,7 +102,15 @@
             width: 6rem;
             height: 3rem;
             fill: rgba($color-beige, .7);
-            
+            @media #{$ipp-land} {
+                width: 7rem;
+                height: 3.5rem;
+            }
+        }
+
+        @media #{$ipp-land} {
+            width: 3.5rem;
+            height: 3.5rem;
         }
 
     }
@@ -98,6 +119,14 @@
 .footer {
     grid-column: 1 /2;
     grid-row: 1/2;
+
+    @media #{$ipp-land} {
+        grid-column: 2 /3;
+        grid-row: 2/3;
+        justify-self: end;
+
+    }
+
     align-self: end;
     justify-self: center;
     color: $color-beige;
