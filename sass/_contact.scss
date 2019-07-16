@@ -21,9 +21,6 @@
 
     display: grid;
     grid-template-columns: 50vw 1fr;
-    @media #{$ipp-land} {
-        grid-row-gap: 10rem;
-    }
 
 
     align-items: end;
@@ -34,9 +31,24 @@
     padding-bottom: 5rem;
     padding-right: 8rem;
     text-align: right;
+
+    @media #{$ipp-land} {
+        grid-row-gap: 10rem;
+    }
+
     @media #{$desktop} {
         padding-right: 5rem;
         padding-bottom: 3rem;
+    }
+
+    @media #{$ipp-port}{
+        margin-top: -8vh;
+        grid-template-columns: 40vw 1fr;
+        grid-row-gap: 0;
+        padding-top: 10rem;
+        padding-bottom: 5rem;
+        background-size: 120%;
+        background-position: bottom;    
     }
 
     &__main {
@@ -47,6 +59,9 @@
 
         @media #{$desktop} {
             grid-gap: 3.8rem;
+        }
+        @media #{$ipp-port}{
+            grid-gap: 5rem;
         }
     }
     &__title{
@@ -134,16 +149,20 @@
         justify-self: end;
 
     }
-
+    @media #{$desktop} {
+        padding-left: 15rem;
+    }
+    @media #{$ipp-port}{
+        grid-column: 1 /2;
+        grid-row: 1/2;
+    }
     align-self: end;
     justify-self: center;
     color: $color-beige;
     //border-right: 1px solid rgba($color-beige, .5);
     padding-left: 5rem;
 
-    @media #{$desktop} {
-        padding-left: 15rem;
-    }
+    
     &__logo{
         & img {
             width: 8rem;

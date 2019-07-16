@@ -103,8 +103,9 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
       background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 60%, rgba(190, 5, 5, 0.9) 60%), url(../image/tango-lesson_ipp.jpg);
       background-size: contain;
-      background-position: bottom;
-      background-attachment: fixed; } }
+      background-position: top;
+      background-attachment: fixed;
+      background-repeat: no-repeat; } }
   .header h3 {
     color: #fff4c4;
     text-transform: capitalize; }
@@ -197,6 +198,9 @@ body {
       .about__title {
         padding-top: 5rem;
         padding-bottom: 2rem; } }
+    @media (min-height: 1366px) and (max-width: 1024px) {
+      .about__title {
+        padding-top: 8rem; } }
   .about__shape {
     float: right;
     width: 100%;
@@ -220,6 +224,10 @@ body {
   background-position-y: 50%;
   background-position-x: 96%;
   background-size: 80%; }
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .travel {
+      background-position-y: 22%;
+      background-size: 100%; } }
   @media (max-width: 1024px) {
     .travel {
       clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 35vh); } }
@@ -228,12 +236,8 @@ body {
       grid-column: 1/ -1;
       grid-row: 5/7;
       clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
-      background-size: 90%;
-      background-position-x: 80%; } }
-  @media (min-height: 1024px) and (max-width: 1366px) {
-    .travel {
-      background-position-y: 22%;
-      background-size: 100%; } }
+      background-size: 80%;
+      background-position: 123% -0.5vh; } }
 
 .lessons {
   background-color: #4d0104;
@@ -260,9 +264,7 @@ body {
     padding-bottom: 3rem; }
     @media (max-width: 1024px) {
       .lessons__title {
-        padding-bottom: 0; } }
-    @media (max-width: 1024px) {
-      .lessons__title {
+        padding-bottom: 0;
         padding-top: 1rem; } }
   .lessons__content {
     width: 60%; }
@@ -271,6 +273,9 @@ body {
       @media (max-width: 1024px) {
         .lessons__content:last-child {
           padding-bottom: 3rem; } }
+      @media (min-height: 1366px) and (max-width: 1024px) {
+        .lessons__content:last-child {
+          padding-bottom: 0; } }
 
 .testimonials {
   background-color: #0a0002;
@@ -295,9 +300,15 @@ body {
     width: 70%;
     padding-top: 15%;
     position: relative; }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .testimonials__main {
+        padding-top: 40%; } }
     @media (max-width: 1024px) {
       .testimonials__main {
         padding-top: 5%; } }
+    @media (min-height: 1366px) and (max-width: 1024px) {
+      .testimonials__main {
+        padding-top: 65%; } }
     .testimonials__main::before {
       content: "\0201c";
       position: absolute;
@@ -317,9 +328,9 @@ body {
         .testimonials__main::before {
           top: -63%;
           left: -2%; } }
-    @media (min-height: 1024px) and (max-width: 1366px) {
-      .testimonials__main {
-        padding-top: 40%; } }
+      @media (min-height: 1366px) and (max-width: 1024px) {
+        .testimonials__main::before {
+          top: 15%; } }
   .testimonials__shape {
     float: right;
     width: 100%;
@@ -414,6 +425,15 @@ body {
     .contact {
       padding-right: 5rem;
       padding-bottom: 3rem; } }
+  @media (min-height: 1366px) and (max-width: 1024px) {
+    .contact {
+      margin-top: -8vh;
+      grid-template-columns: 40vw 1fr;
+      grid-row-gap: 0;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      background-size: 120%;
+      background-position: bottom; } }
   .contact__main {
     grid-column: 2 /3;
     display: grid;
@@ -422,6 +442,9 @@ body {
     @media (max-width: 1024px) {
       .contact__main {
         grid-gap: 3.8rem; } }
+    @media (min-height: 1366px) and (max-width: 1024px) {
+      .contact__main {
+        grid-gap: 5rem; } }
   .contact__title {
     width: 100%; }
     .contact__title::after {
@@ -492,6 +515,10 @@ body {
   @media (max-width: 1024px) {
     .footer {
       padding-left: 15rem; } }
+  @media (min-height: 1366px) and (max-width: 1024px) {
+    .footer {
+      grid-column: 1 /2;
+      grid-row: 1/2; } }
   .footer__logo img {
     width: 8rem;
     opacity: .6; }
@@ -522,6 +549,9 @@ body {
       background-size: 200%;
       background-position-x: 80%;
       padding-top: 8%; } }
+  @media (min-height: 1366px) and (max-width: 1024px) {
+    .fees {
+      padding-top: 5%; } }
   @media (max-width: 1024px) {
     .fees {
       grid-gap: 2rem; } }

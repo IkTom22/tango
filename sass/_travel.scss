@@ -4,6 +4,20 @@
     background-color: $color-green-background; 
     clip-path:polygon(0 0, 100% 0, 100% 100vh, 0 35vh);
 
+   
+
+    margin-top: -17vh;
+    background-image: linear-gradient(to bottom right, rgba($color-green-light, .4), rgba($color-green-dark, .7), rgba($color-green-mid-dark, .9)), url(../image/geoffandBeth-lg.png);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 96%;
+    background-size: 80%;
+   
+   
+    @media #{$ipp-land} {
+        background-position-y: 22%;
+        background-size: 100%;
+    }
     @media #{$desktop} {
         clip-path:polygon(0 0, 100% 0, 100% 90vh, 0 35vh);
     }
@@ -11,22 +25,7 @@
         grid-column: 1/ -1;
         grid-row: 5/7;
         clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
-        background-size: 90%;
-        background-position-x: 80%;
-    }
-
-    margin-top: -17vh;
-    //background-image: linear-gradient(rgba($color-green-dark, .5), rgba($color-green-dark, .5)), url(../image/geoffandBeth-lg.png);
-    background-image: linear-gradient(to bottom right, rgba($color-green-light, .4), rgba($color-green-dark, .7), rgba($color-green-mid-dark, .9)), url(../image/geoffandBeth-lg.png);
-    background-repeat: no-repeat;
-    //background-position: 99% 15%;
-    background-position-y: 50%;
-    background-position-x: 96%;
-    background-size: 80%;
-    // background-position: center;
-
-    @media #{$ipp-land} {
-        background-position-y: 22%;
-        background-size: 100%;
-    }
+        background-size: 80%;
+        background-position: (123% -.5vh);
+    }   
 }

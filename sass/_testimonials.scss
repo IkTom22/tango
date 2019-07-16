@@ -23,9 +23,14 @@
     &__main{
         width: 70%;
         padding-top: 15%;
-
+        @media #{$ipp-land} {
+            padding-top: 40%;
+        }
         @media #{$desktop}{
             padding-top: 5%;
+        }
+        @media #{$ipp-port}{
+            padding-top: 65%;
         }
 
         @include quote;
@@ -43,18 +48,17 @@
                 top: -63%;
                 left: -2%;
             }
+            @media #{$ipp-port}{
+                top: 15%;
+            }
 
         }
         position: relative;
 
-        @media #{$ipp-land} {
-            padding-top: 40%;
-        }
+        
     }
     &__shape {
         float: right;
-        // grid-column: 1 /-1;
-        // grid-row: 1/-1;
         width: 100%;
         height: 75vh;
         shape-outside: polygon(27.5% 100%, 100% 42%, 100% 100%);

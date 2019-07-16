@@ -36,6 +36,9 @@
             padding-top: 5rem;
             padding-bottom: 2rem;
         }
+        @media #{$ipp-port} {
+            padding-top: 8rem;
+        }
     }
     &__shape {
         float: right;

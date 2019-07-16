@@ -6,6 +6,7 @@
     @media #{$desktop}{
         padding-top: 5rem;
     }
+    
     @include fixed-background; 
     color: $color-beige;
     grid-row: 5/9;
@@ -16,14 +17,12 @@
     grid-gap: 2rem;
     @include centering;
 
-   
+  
 
     &__title {
         padding-bottom: 3rem;
         @media #{$desktop} {
             padding-bottom: 0;
-        }
-        @media #{$desktop}{
             padding-top: 1rem;
         }
     }
@@ -35,6 +34,11 @@
             @media #{$desktop}{
                 padding-bottom: 3rem;
             }
+            @media #{$ipp-port}{
+                padding-bottom: 0;
+            }
         }  
     }
+
+    
 }

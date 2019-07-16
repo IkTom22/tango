@@ -6,10 +6,8 @@
     z-index: 500;
     
     background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_lg.jpg);
- 
-    background-size: cover;
-    background-position: bottom;
-    background-attachment: fixed;
+    @include fixed-bottom-cover;
+
     clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 65vh);
     display: grid;
     text-align: center;
@@ -18,9 +16,7 @@
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
         background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_ipp.jpg);
     
-        background-size: contain;
-        background-position: bottom;
-        background-attachment: fixed;
+        @include contain-top-fixed;
     }
  
     h3 {
