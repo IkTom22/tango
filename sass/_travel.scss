@@ -3,6 +3,18 @@
     grid-row: 4/7;
     background-color: $color-green-background; 
     clip-path:polygon(0 0, 100% 0, 100% 100vh, 0 35vh);
+
+    @media #{$desktop} {
+        clip-path:polygon(0 0, 100% 0, 100% 90vh, 0 35vh);
+    }
+    @media #{$ipp-port}{
+        grid-column: 1/ -1;
+        grid-row: 5/7;
+        clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
+        background-size: 90%;
+        background-position-x: 80%;
+    }
+
     margin-top: -17vh;
     //background-image: linear-gradient(rgba($color-green-dark, .5), rgba($color-green-dark, .5)), url(../image/geoffandBeth-lg.png);
     background-image: linear-gradient(to bottom right, rgba($color-green-light, .4), rgba($color-green-dark, .7), rgba($color-green-mid-dark, .9)), url(../image/geoffandBeth-lg.png);

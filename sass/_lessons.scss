@@ -3,7 +3,9 @@
     background-color: $color-red-dark;
     background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_lg.jpg);
     //background-image: linear-gradient(rgba($color-red-dark, .7), rgba($color-red-deep-dark, .7)), url(../image/test-tango-landing.png);
-
+    @media #{$desktop}{
+        padding-top: 5rem;
+    }
     @include fixed-background; 
     color: $color-beige;
     grid-row: 5/9;
@@ -14,14 +16,25 @@
     grid-gap: 2rem;
     @include centering;
 
+   
+
     &__title {
-        
         padding-bottom: 3rem;
+        @media #{$desktop} {
+            padding-bottom: 0;
+        }
+        @media #{$desktop}{
+            padding-top: 1rem;
+        }
     }
     &__content {
         width: 60%;
+    
         &:last-child{
             padding-bottom: 10rem;
+            @media #{$desktop}{
+                padding-bottom: 3rem;
+            }
         }  
     }
 }

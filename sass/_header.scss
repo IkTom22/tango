@@ -14,6 +14,14 @@
     display: grid;
     text-align: center;
 
+    @media #{$ipp-port}{
+        clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
+        background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_ipp.jpg);
+    
+        background-size: contain;
+        background-position: bottom;
+        background-attachment: fixed;
+    }
  
     h3 {
         color: $color-beige;

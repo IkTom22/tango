@@ -34,12 +34,20 @@
     padding-bottom: 5rem;
     padding-right: 8rem;
     text-align: right;
+    @media #{$desktop} {
+        padding-right: 5rem;
+        padding-bottom: 3rem;
+    }
 
     &__main {
         grid-column: 2 /3;
         display: grid;
         grid-gap: 5rem;
         align-items: end;
+
+        @media #{$desktop} {
+            grid-gap: 3.8rem;
+        }
     }
     &__title{
         width: 100%;
@@ -132,6 +140,10 @@
     color: $color-beige;
     //border-right: 1px solid rgba($color-beige, .5);
     padding-left: 5rem;
+
+    @media #{$desktop} {
+        padding-left: 15rem;
+    }
     &__logo{
         & img {
             width: 8rem;
