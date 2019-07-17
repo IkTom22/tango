@@ -37,6 +37,10 @@
             @media #{$ipp-port}{
                 padding-bottom: 0;
             }
+            @media #{$xlg-phone}{
+                letter-spacing: 0;
+                padding-bottom: 1.5rem;
+            }
         }  
     }
 

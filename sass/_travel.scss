@@ -28,4 +28,10 @@
         background-size: 80%;
         background-position: (123% -.5vh);
     }   
+
+    @media #{$xlg-phone}{
+        background-position-x: 100%;
+        background-position-y: 4%;
+        background-size: 89%;
+    }
 }

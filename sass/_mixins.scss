@@ -22,9 +22,9 @@
 
 @mixin contain-top-fixed{
     background-size: contain;
-        background-position: top;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 @mixin bottom-line {

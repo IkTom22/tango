@@ -38,7 +38,7 @@ $ipp-land: "(min-height: 1024px) and (max-width: 1366px)";
 $desktop: "(max-width: 1024px)";
 $ipp-port: "(min-height: 1366px) and (max-width: 1024px)";
 $ip-port: "(min-height: 1024px) and (max-width: 768px)";
-$xlg-phone: "(max-width: 824x)";
+$xlg-phone: "(max-width: 824px)";
 $lg-phone:"(min-height: 731px) and (max-height: 824px) and (max-width: 480px)";
 $m-phone: "(max-width: 768x)";
 $s-phone: "(max-width: 568x)";
@@ -58,7 +58,10 @@ html {
     @media #{$ipp-land} {
         font-size: 68%;
     }
-
+    @media #{$xlg-phone}{
+        font-size: 50%; //8/16
+        letter-spacing: .08rem;
+    }
     
 }
 
@@ -71,6 +74,7 @@ body {
     font-weight: 300;
     background-color:$color-green-darkest;
     overflow-x: hidden;
+    
 }
 .container {
     width: 100vw;
@@ -83,10 +87,11 @@ body {
         grid-template-rows: repeat(12, 16.5vh);
         grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     }
+    // @media #{$ip-port}{
+    //     grid-template-rows: repeat(12, 16.5vh);
+    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // }
     // position: relative;
     overflow: hidden;
-
-
-    
 }
 

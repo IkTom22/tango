@@ -37,6 +37,14 @@
     @media #{$desktop} {
         font-size: 3rem;
     }
+    @media #{$xlg-phone} {
+        width: 120%;
+        // font-size: 4rem;
+        font-family: $font-body;
+        font-weight: 300;
+        font-size: 2rem;
+        letter-spacing: .1rem;
+    }
     
 }
 
