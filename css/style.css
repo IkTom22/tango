@@ -31,10 +31,12 @@ body {
   grid-template-rows: repeat(12, 33vh);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   overflow: hidden; }
-  @media (min-height: 1366px) and (max-width: 1024px) {
+  @media (max-height: 1366px) and (max-width: 1024px), (max-height: 1024px) and (max-width: 768px) {
     .container {
-      grid-template-rows: repeat(12, 16.5vh);
-      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
+      grid-template-rows: repeat(12, 16.5vh); } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .container {
+      grid-template-rows: repeat(10, 33vh); } }
 
 .heading-1, .heading-2, .heading-3 {
   font-family: "Voltaire", sans-serif; }
@@ -42,6 +44,9 @@ body {
 .heading-1 {
   font-size: 4.5rem;
   letter-spacing: .3rem; }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .heading-1 {
+      font-size: 3.5rem; } }
 
 .heading-2 {
   font-size: 4rem;
@@ -67,6 +72,13 @@ body {
   @media (max-width: 1024px) {
     .sub-3 {
       font-size: 3rem; } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .sub-3 {
+      width: 120%;
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 300;
+      font-size: 2.5rem;
+      letter-spacing: .1rem; } }
   @media (max-width: 824px) {
     .sub-3 {
       width: 120%;
@@ -109,7 +121,10 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 100vh, 0 65vh);
   display: grid;
   text-align: center; }
-  @media (min-height: 1366px) and (max-width: 1024px) {
+  @media (min-height: 1024px) and (max-width: 1366px) {
+    .header {
+      background-position: 50% 250%; } }
+  @media (max-height: 1366px) and (max-width: 1024px) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
       background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 60%, rgba(190, 5, 5, 0.9) 60%), url(../image/tango-lesson_ipp.jpg);
@@ -117,9 +132,24 @@ body {
       background-position: top;
       background-attachment: fixed;
       background-repeat: no-repeat; } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65vh);
+      background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 60%, rgba(190, 5, 5, 0.9) 60%), url(../image/tango-lesson_m.jpg);
+      background-size: auto;
+      background-position: 50% 130%; } }
   @media (max-width: 824px) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh); } }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
+      background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 60%, rgba(190, 5, 5, 0.9) 60%), url(../image/tango-lesson_ipp.jpg);
+      background-size: contain;
+      background-position: top;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 120%; } }
   .header h3 {
     color: #fff4c4;
     text-transform: capitalize; }
@@ -137,9 +167,17 @@ body {
     @media (max-width: 1024px) {
       .header__name {
         font-size: 12rem; } }
+    @media (max-height: 768px) and (max-width: 1024px) {
+      .header__name {
+        transform: translate(5%, 95%) rotate(-15deg);
+        font-size: 12rem; } }
     @media (max-width: 824px) {
       .header__name {
         transform: translate(5%, 45%) rotate(-10deg); } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .header__name {
+        transform: translate(5%, 95%) rotate(-15deg);
+        font-size: 11rem; } }
   .header__mainbox {
     display: grid;
     position: absolute;
@@ -158,6 +196,9 @@ body {
       .header__mainbox {
         grid-gap: 2rem;
         width: 30%; } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .header__mainbox {
+        right: 4%; } }
   .header__logo {
     width: 25rem;
     opacity: .9; }
@@ -165,6 +206,9 @@ body {
       .header__logo {
         width: 10rem;
         text-align: center; } }
+    @media (max-height: 768px) and (max-width: 1024px) {
+      .header__logo {
+        width: 12rem; } }
   .header__sub {
     color: #fff4c4;
     text-transform: capitalize; }
@@ -173,6 +217,9 @@ body {
       @media (min-height: 1024px) and (max-width: 1366px) {
         .header__sub span {
           font-size: 3.5rem; } }
+      @media (max-height: 1024px) and (max-width: 768px) {
+        .header__sub span {
+          font-size: 2.5rem; } }
   .header h1 {
     color: #fff4c4;
     text-transform: uppercase;
@@ -194,20 +241,44 @@ body {
   align-content: center;
   align-items: center;
   padding-left: 3rem; }
-  @media (min-height: 1366px) and (max-width: 1024px) {
+  @media (max-height: 1366px) and (max-width: 1024px) {
     .about {
       grid-column: full-start /-1;
       clip-path: polygon(0 0, 100% 0, 100% 16.5vh, 0 100%);
       margin-top: 0; } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .about {
+      margin-top: -3vh;
+      clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 80%); } }
   @media (max-width: 824px) {
     .about {
       margin-top: 0; } }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .about {
+      grid-column: full-start /-1;
+      clip-path: polygon(0 0, 100% 0, 100% 16.5vh, 0 100%);
+      margin-top: 0; } }
+  @media (max-width: 812px) {
+    .about {
+      margin-top: -2%; } }
   .about__main {
     color: #fff4c4;
     padding: 15vh 2rem 2rem 2rem; }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .about__main {
+        padding: 0 2rem 2rem 2rem; } }
+    @media (max-height: 1366px) and (max-width: 1024px) {
+      .about__main {
+        padding: 12.5vh 2rem 2rem 2rem; } }
     @media (max-width: 1024px) {
       .about__main {
         padding: 12.5vh 2rem 2rem 2rem; } }
+    @media (max-height: 768px) and (max-width: 1024px) {
+      .about__main {
+        padding: 25vh 2rem 2rem 2rem; } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .about__main {
+        padding: 15vh 2rem 2rem 2rem; } }
   .about__title {
     padding-top: 2rem;
     padding-bottom: 5rem; }
@@ -218,20 +289,30 @@ body {
       .about__title {
         padding-top: 5rem;
         padding-bottom: 2rem; } }
-    @media (min-height: 1366px) and (max-width: 1024px) {
+    @media (max-height: 1366px) and (max-width: 1024px) {
       .about__title {
         padding-top: 8rem; } }
+    @media (max-width: 812px) {
+      .about__title {
+        padding-top: 10rem; } }
   .about__shape {
     float: right;
     width: 100%;
     height: 75vh;
     shape-outside: polygon(0 100%, 100% 0, 100% 100%);
     shape-margin: 3rem; }
+    @media (min-height: 1024px) and (max-width: 1366px) {
+      .about__shape {
+        shape-margin: 0; } }
     @media (max-width: 1024px) {
       .about__shape {
         height: 100%;
         shape-outside: polygon(0 91%, 100% 12%, 100% 100%, 0 100%);
         shape-margin: 2rem; } }
+    @media (max-height: 768px) and (max-width: 1024px) {
+      .about__shape {
+        shape-outside: polygon(0 69%, 100% 9%, 100% 100%, 0 80%);
+        shape-margin: 4rem; } }
 
 .travel {
   grid-column: col-start 2/ -1;
@@ -251,18 +332,34 @@ body {
   @media (max-width: 1024px) {
     .travel {
       clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 35vh); } }
-  @media (min-height: 1366px) and (max-width: 1024px) {
+  @media (max-height: 1366px) and (max-width: 1024px) {
     .travel {
       grid-column: 1/ -1;
       grid-row: 5/7;
+      margin-top: -22vh;
       clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
-      background-size: 80%;
-      background-position: 123% -0.5vh; } }
+      background-size: 65%;
+      background-position: 105% 30%; } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .travel {
+      grid-column: col-start 2/ -1;
+      grid-row: 4/6;
+      clip-path: polygon(0 0, 100% 0, 100% 74vh, 0 30vh);
+      background-size: 90%;
+      margin-top: -8vh; } }
   @media (max-width: 824px) {
     .travel {
       background-position-x: 100%;
       background-position-y: 4%;
       background-size: 89%; } }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .travel {
+      grid-column: 1/ -1;
+      grid-row: 5/7;
+      clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
+      background-position-x: 100%;
+      background-size: 80%;
+      background-position: 123% -0.5vh; } }
 
 .lessons {
   background-color: #4d0104;
@@ -285,6 +382,21 @@ body {
   @media (max-width: 1024px) {
     .lessons {
       padding-top: 5rem; } }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .lessons {
+      background-image: linear-gradient(rgba(35, 31, 32, 0.4), rgba(17, 1, 1, 0.7)), url(../image/tango-teachers_ipp_2.jpg);
+      padding-top: 17rem;
+      background-position-y: 5%;
+      margin-bottom: -20%;
+      background-position-y: 600%;
+      background-attachment: fixed;
+      background-size: auto;
+      background-repeat: no-repeat; } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .lessons {
+      grid-row: 5/8;
+      padding-top: 15%;
+      align-content: start; } }
   .lessons__title {
     padding-bottom: 3rem; }
     @media (max-width: 1024px) {
@@ -298,13 +410,16 @@ body {
       @media (max-width: 1024px) {
         .lessons__content:last-child {
           padding-bottom: 3rem; } }
-      @media (min-height: 1366px) and (max-width: 1024px) {
+      @media (max-height: 1366px) and (max-width: 1024px) {
         .lessons__content:last-child {
           padding-bottom: 0; } }
       @media (max-width: 824px) {
         .lessons__content:last-child {
           letter-spacing: 0;
           padding-bottom: 1.5rem; } }
+    @media (max-width: 812px) {
+      .lessons__content {
+        width: 80%; } }
 
 .testimonials {
   background-color: #0a0002;
@@ -317,6 +432,13 @@ body {
   align-content: center;
   align-items: center;
   padding-left: 5rem; }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .testimonials {
+      clip-path: polygon(0 15%, 100% 62%, 100% 100%, 0 100%); } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .testimonials {
+      grid-row: 7/9;
+      clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%); } }
   .testimonials .section__title {
     width: 100%; }
     .testimonials .section__title::after {
@@ -335,9 +457,15 @@ body {
     @media (max-width: 1024px) {
       .testimonials__main {
         padding-top: 5%; } }
-    @media (min-height: 1366px) and (max-width: 1024px) {
+    @media (max-height: 1366px) and (max-width: 1024px) {
       .testimonials__main {
         padding-top: 65%; } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .testimonials__main {
+        padding-top: 75%; } }
+    @media (max-height: 768px) and (max-width: 1024px) {
+      .testimonials__main {
+        padding-top: 27%; } }
     .testimonials__main::before {
       content: "\0201c";
       position: absolute;
@@ -357,9 +485,15 @@ body {
         .testimonials__main::before {
           top: -63%;
           left: -2%; } }
-      @media (min-height: 1366px) and (max-width: 1024px) {
+      @media (max-height: 1366px) and (max-width: 1024px) {
         .testimonials__main::before {
           top: 15%; } }
+      @media (max-height: 1024px) and (max-width: 768px) {
+        .testimonials__main::before {
+          top: 22.5%; } }
+      @media (max-height: 768px) and (max-width: 1024px) {
+        .testimonials__main::before {
+          top: -8%; } }
   .testimonials__shape {
     float: right;
     width: 100%;
@@ -368,6 +502,12 @@ body {
     shape-margin: 4rem; }
   .testimonials__title {
     margin-bottom: 5rem; }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .testimonials__title {
+        margin-bottom: 4rem; } }
+    @media (max-width: 812px) {
+      .testimonials__title {
+        margin-bottom: 3rem; } }
   .testimonials__voice {
     font-style: italic;
     opacity: 0;
@@ -376,14 +516,20 @@ body {
     @media (min-height: 1024px) and (max-width: 1366px) {
       .testimonials__voice {
         font-size: 2.2rem; } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .testimonials__voice {
+        font-size: 2rem; } }
     .testimonials__voice--title {
-      margin-bottom: 2rem; }
+      margin-bottom: 1.8rem; }
     .testimonials__voice--name {
       display: grid;
       align-items: center;
       grid-template-columns: 10rem max-content;
       padding-top: 3rem;
       grid-gap: 1rem; }
+      @media (max-height: 1024px) and (max-width: 768px) {
+        .testimonials__voice--name {
+          padding-top: 1.5rem; } }
       .testimonials__voice--name::before {
         content: "";
         display: block;
@@ -454,7 +600,7 @@ body {
     .contact {
       padding-right: 5rem;
       padding-bottom: 3rem; } }
-  @media (min-height: 1366px) and (max-width: 1024px) {
+  @media (max-height: 1366px) and (max-width: 1024px), (max-height: 1024px) and (max-width: 768px) {
     .contact {
       margin-top: -8vh;
       grid-template-columns: 40vw 1fr;
@@ -463,6 +609,12 @@ body {
       padding-bottom: 5rem;
       background-size: 120%;
       background-position: bottom; } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .contact {
+      grid-row: 9 /11;
+      margin-top: -20vh;
+      grid-template-columns: 60vw 1fr;
+      grid-template-rows: 1fr; } }
   .contact__main {
     grid-column: 2 /3;
     display: grid;
@@ -471,9 +623,16 @@ body {
     @media (max-width: 1024px) {
       .contact__main {
         grid-gap: 3.8rem; } }
-    @media (min-height: 1366px) and (max-width: 1024px) {
+    @media (max-height: 1366px) and (max-width: 1024px), (max-height: 1024px) and (max-width: 768px) {
       .contact__main {
-        grid-gap: 5rem; } }
+        grid-gap: 5rem;
+        height: 70%; } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .contact__main {
+        margin-bottom: 3rem; } }
+    @media (max-height: 768px) and (max-width: 1024px) {
+      .contact__main {
+        padding-top: 50vh; } }
   .contact__title {
     width: 100%; }
     .contact__title::after {
@@ -544,10 +703,13 @@ body {
   @media (max-width: 1024px) {
     .footer {
       padding-left: 15rem; } }
-  @media (min-height: 1366px) and (max-width: 1024px) {
+  @media (max-height: 1366px) and (max-width: 1024px), (max-height: 1024px) and (max-width: 768px) {
     .footer {
       grid-column: 1 /2;
-      grid-row: 1/2; } }
+      grid-row: 1/-1; } }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .footer {
+      margin-bottom: 3rem; } }
   .footer__logo img {
     width: 8rem;
     opacity: .6; }
@@ -578,12 +740,18 @@ body {
       background-size: 200%;
       background-position-x: 80%;
       padding-top: 8%; } }
-  @media (min-height: 1366px) and (max-width: 1024px) {
-    .fees {
-      padding-top: 5%; } }
   @media (max-width: 1024px) {
     .fees {
       grid-gap: 2rem; } }
+  @media (max-height: 1366px) and (max-width: 1024px) {
+    .fees {
+      padding-top: 5%; } }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .fees {
+      padding-top: 4%; } }
+  @media (max-height: 768px) and (max-width: 1024px) {
+    .fees {
+      grid-row: 9 /-1; } }
   .fees__content {
     list-style: none;
     align-self: start; }

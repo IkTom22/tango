@@ -11,20 +11,25 @@
         background-position-x: 80%;
         padding-top: 8%;
         }
-
+    @media #{$desktop} {
+        grid-gap: 2rem;
+    }
     @media #{$ipp-port}{
         padding-top: 5%;
     }    
-    
+    @media #{$ip-port}{
+        padding-top: 4%;
+    }
+    @media #{$ip-land}{
+        grid-row: 9 /-1;
+    }
     grid-column: 1/-1;
     grid-row: 11 /-1;
     height: fit-content;
     color: $color-beige;
     display: grid;
     grid-gap: 5rem;
-    @media #{$desktop} {
-        grid-gap: 2rem;
-    }
+   
     padding-top: 3rem;
     padding-left: 5rem;
     align-items: end;

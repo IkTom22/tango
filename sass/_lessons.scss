@@ -3,9 +3,7 @@
     background-color: $color-red-dark;
     background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_lg.jpg);
     //background-image: linear-gradient(rgba($color-red-dark, .7), rgba($color-red-deep-dark, .7)), url(../image/test-tango-landing.png);
-    @media #{$desktop}{
-        padding-top: 5rem;
-    }
+    
     
     @include fixed-background; 
     color: $color-beige;
@@ -17,8 +15,27 @@
     grid-gap: 2rem;
     @include centering;
 
-  
+    @media #{$desktop}{
+        padding-top: 5rem;
+    }
 
+
+    @media #{$ip-port}{
+        background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_ipp_2.jpg);
+        padding-top: 17rem;
+        background-position-y: 5%;
+        margin-bottom: -20%;
+        background-position-y: 600%; 
+        background-attachment: fixed;
+        background-size: auto;
+        background-repeat: no-repeat;  
+    }
+    
+    @media #{$ip-land}{
+        grid-row: 5/8;
+        padding-top: 15%;
+        align-content: start;
+    }
     &__title {
         padding-bottom: 3rem;
         @media #{$desktop} {
@@ -42,6 +59,9 @@
                 padding-bottom: 1.5rem;
             }
         }  
+        @media #{$iphone-x}{
+            width: 80%;
+        }
     }
 
     

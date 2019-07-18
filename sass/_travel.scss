@@ -24,14 +24,30 @@
     @media #{$ipp-port}{
         grid-column: 1/ -1;
         grid-row: 5/7;
+        margin-top: -22vh;
         clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
-        background-size: 80%;
-        background-position: (123% -.5vh);
-    }   
+        background-size: 65%;
+        background-position: 105% 30%;
 
+    }   
+    @media #{$ip-land}{
+        grid-column: col-start 2/ -1;
+        grid-row: 4/6;
+        clip-path: polygon(0 0, 100% 0, 100% 74vh, 0 30vh);
+        background-size: 90%;
+        margin-top: -8vh;
+    }
     @media #{$xlg-phone}{
         background-position-x: 100%;
         background-position-y: 4%;
         background-size: 89%;
+    }
+    @media #{$ip-port}{
+        grid-column: 1/ -1;
+        grid-row: 5/7;
+        clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
+        background-position-x: 100%;
+        background-size: 80%;
+        background-position: (123% -.5vh);
     }
 }

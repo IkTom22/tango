@@ -18,16 +18,44 @@
         clip-path: polygon(0 0, 100% 0, 100% 16.5vh, 0 100%);
         margin-top: 0;
     }
+    @media #{$ip-land} {
+        margin-top: -3vh;
+        clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 80%);
+    }
     @media #{$xlg-phone} {
         margin-top: 0;
+    }
+    @media #{$ip-port} {
+        grid-column: full-start /-1; 
+        clip-path: polygon(0 0, 100% 0, 100% 16.5vh, 0 100%);
+        margin-top: 0;
+    }
+    
+    @media #{$iphone-x}{
+        margin-top: -2%;
     }
 
     &__main {
         color: $color-beige;
         padding: 15vh 2rem 2rem 2rem;
+        @media #{$ipp-land}{
+            padding: 0 2rem 2rem 2rem;
+        }  
+        @media #{$ipp-port} {
+            padding: 12.5vh 2rem 2rem 2rem;
+        }
+
         @media #{$desktop} {
             padding: 12.5vh 2rem 2rem 2rem;
         }
+        @media #{$ip-land} {
+            padding: 25vh 2rem 2rem 2rem;
+        }
+        @media #{$ip-port} {
+            padding: 15vh 2rem 2rem 2rem;
+        }
+        
+
     }
     &__title {
         padding-top: 2rem;
@@ -43,6 +71,9 @@
         @media #{$ipp-port} {
             padding-top: 8rem;
         }
+        @media #{$iphone-x}{
+            padding-top: 10rem;;
+        }
     }
     &__shape {
         float: right;
@@ -51,11 +82,18 @@
        
         shape-outside: polygon(0 100%, 100% 0, 100% 100%); 
         shape-margin: 3rem ;
+        @media #{$ipp-land}{
+            shape-margin: 0;
+        }
 
         @media #{$desktop} {
             height: 100%;
             shape-outside: polygon(0 91%,100% 12%, 100% 100%, 0 100%);
             shape-margin: 2rem;
+        }
+        @media #{$ip-land} {
+            shape-outside: polygon(0 69%, 100% 9%, 100% 100%, 0 80%);
+            shape-margin: 4rem;
         }
 
     }

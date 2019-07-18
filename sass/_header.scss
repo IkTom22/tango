@@ -12,17 +12,34 @@
     display: grid;
     text-align: center;
 
+    @media #{$ipp-land} {
+        background-position: 50% 250%;
+    }
+
+    
     @media #{$ipp-port}{
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
         background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_ipp.jpg);
-    
         @include contain-top-fixed;
+    }
+    @media #{$ip-land} {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 65vh);
+        background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_m.jpg);
+        background-size: auto;
+        background-position: 50% 130%;
+        
     }
     @media #{$xlg-phone}{
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
     }
 
- 
+    @media #{$ip-port}{
+        clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
+        background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_ipp.jpg);
+        @include contain-top-fixed;
+        background-size: 120%;
+    }
+
     h3 {
         color: $color-beige;
         text-transform: capitalize;  
@@ -37,7 +54,7 @@
         color: rgba($color-beige, .8);
 
 
-        @media #{$ipp-land} {
+        @media #{$ipp-land}{
             transform: translate(5%, 95%) rotate(-15deg);
             font-size: 15rem;
         }
@@ -45,10 +62,20 @@
         @media #{$desktop} {
             font-size: 12rem;
         }
+
+        @media #{$ip-land} {
+            transform: translate(5%, 95%) rotate(-15deg);
+            font-size: 12rem;
+           
+        }
         @media #{$xlg-phone}{
             transform: translate(5%, 45%) rotate(-10deg);
         }
-        
+        @media #{$ip-port}{
+            transform: translate(5%, 95%) rotate(-15deg);
+            font-size: 11rem;
+        }
+
         
     }
     &__mainbox{
@@ -61,6 +88,10 @@
         @media #{$desktop} {
             grid-gap: 2rem;
             width: 30%;
+        }
+
+        @media #{$ip-port}{
+            right: 4%;
         }
         height: 70%;
         width: 30%;
@@ -80,6 +111,9 @@
             width: 10rem;
             text-align: center;
         }
+        @media #{$ip-land} {
+            width: 12rem;
+        }
     }
     &__sub {
       
@@ -92,10 +126,13 @@
         @media #{$ipp-land} {
             font-size: 3.5rem;
         }
+        
+        @media #{$ip-port}{
+            font-size: 2.5rem;
+        }
 
        }
       
-        
     }
     
     & h1 {

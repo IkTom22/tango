@@ -13,6 +13,15 @@
     align-content: center;
     align-items: center;
     padding-left: 5rem;
+    @media #{$ip-port}{
+        clip-path: polygon(0 15%, 100% 62%, 100% 100%, 0 100%);
+    }
+    @media #{$ip-land} {
+        grid-row: 7/9;
+        clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+    }
+
+
     & .section {  
         &__title {
             width: 100%;
@@ -31,6 +40,12 @@
         }
         @media #{$ipp-port}{
             padding-top: 65%;
+        }
+        @media #{$ip-port}{
+            padding-top: 75%;
+        }
+        @media #{$ip-land} {
+            padding-top: 27%;
         }
 
         @include quote;
@@ -51,7 +66,12 @@
             @media #{$ipp-port}{
                 top: 15%;
             }
-
+            @media #{$ip-port} {
+                top: 22.5%;
+            }
+            @media #{$ip-land} {
+                top: -8%;
+            }
         }
         position: relative;
 
@@ -67,6 +87,12 @@
 
     &__title {
         margin-bottom: 5rem; 
+        @media #{$ip-port} {
+            margin-bottom: 4rem; 
+        }
+        @media #{$iphone-x}{
+            margin-bottom: 3rem; 
+        }
 
     }
     &__voice {  
@@ -78,10 +104,12 @@
         @media #{$ipp-land} {
             font-size: 2.2rem;
         }
-
+        @media #{$ip-port} {
+            font-size: 2rem;
+        }
 
         &--title{
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
         }
 
         &--name {
@@ -90,6 +118,9 @@
             grid-template-columns: 10rem max-content;
             padding-top: 3rem;
             grid-gap: 1rem;
+            @media #{$ip-port} {
+                padding-top: 1.5rem;
+            }
             &::before{
                 content: "";
                 display: block;

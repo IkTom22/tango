@@ -36,11 +36,12 @@ $font-stroke-2: 'Tangerine', cursive;
 // RESPONSIVE BREAKPOINTS
 $ipp-land: "(min-height: 1024px) and (max-width: 1366px)";
 $desktop: "(max-width: 1024px)";
-$ipp-port: "(min-height: 1366px) and (max-width: 1024px)";
-$ip-port: "(min-height: 1024px) and (max-width: 768px)";
+$ipp-port: "(max-height: 1366px) and (max-width: 1024px)";
+$ip-land: "(max-height: 768px) and (max-width: 1024px)";
+$ip-port: "(max-height: 1024px) and (max-width: 768px)";
 $xlg-phone: "(max-width: 824px)";
-$lg-phone:"(min-height: 731px) and (max-height: 824px) and (max-width: 480px)";
-$m-phone: "(max-width: 768x)";
+$iphone-x: "(max-width: 812px)";
+$xlg-phone-port:"(min-height: 731px) and (max-height: 824px) and (max-width: 480px)";
 $s-phone: "(max-width: 568x)";
 $other-phone: "(min-height: 480px) and (max-width: 375px)";
 
@@ -62,12 +63,10 @@ html {
         font-size: 50%; //8/16
         letter-spacing: .08rem;
     }
-    
 }
 
 body {
     font-size: 1.7rem;
-
     font-weight: 300;
     line-height: 1.6;
     font-family: $font-body;
@@ -83,10 +82,17 @@ body {
     grid-template-rows: repeat(12, 33vh);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
-    @media #{$ipp-port}{
+    @media  #{$ipp-port}, #{$ip-port} {
         grid-template-rows: repeat(12, 16.5vh);
-        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+        // grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     }
+    @media #{$ip-land} {
+        grid-template-rows: repeat(10, 33vh);
+    }
+    // @media #{$ip-port}{
+    //     grid-template-rows: repeat(12, 16.5vh);
+    //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+    // }
     // @media #{$ip-port}{
     //     grid-template-rows: repeat(12, 16.5vh);
     //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
