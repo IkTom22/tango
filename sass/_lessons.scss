@@ -20,28 +20,39 @@
     }
 
 
-    @media #{$ip-port}{
-        background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_ipp_2.jpg);
-        padding-top: 17rem;
-        background-position-y: 5%;
-        margin-bottom: -20%;
-        background-position-y: 600%; 
-        background-attachment: fixed;
-        background-size: auto;
-        background-repeat: no-repeat;  
-    }
     
     @media #{$ip-land}{
         grid-row: 5/8;
         padding-top: 15%;
         align-content: start;
     }
+
+    @media #{$xlg-phone}{
+        grid-row: 5/9;
+    }
+    // @media #{$ip-port}{
+    //     background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_ipp_2.jpg);
+    //    // padding-top: 17rem;
+    //     background-position-y: 5%;
+    //     margin-bottom: -35%;
+    //     background-position-y: 600%; 
+    //     background-attachment: fixed;
+    //     background-size: auto;
+    //     background-repeat: no-repeat;  
+    // }
     &__title {
         padding-bottom: 3rem;
         @media #{$desktop} {
             padding-bottom: 0;
             padding-top: 1rem;
         }
+
+        @media #{$xlg-phone}{
+            font-size: 2.9rem;
+            padding-top: 2rem;
+            width: 80%;
+        }
+
     }
     &__content {
         width: 60%;
@@ -57,8 +68,13 @@
             @media #{$xlg-phone}{
                 letter-spacing: 0;
                 padding-bottom: 1.5rem;
+                
             }
         }  
+        @media #{$xlg-phone}{
+            width: 80%;
+            
+        }
         @media #{$iphone-x}{
             width: 80%;
         }

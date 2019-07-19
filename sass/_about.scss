@@ -23,7 +23,8 @@
         clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 80%);
     }
     @media #{$xlg-phone} {
-        margin-top: 0;
+        margin-top: -1%;
+        clip-path: polygon(0 0, 100% 0, 100% 27vh, 0 100%);
     }
     @media #{$ip-port} {
         grid-column: full-start /-1; 
@@ -44,12 +45,14 @@
         @media #{$ipp-port} {
             padding: 12.5vh 2rem 2rem 2rem;
         }
-
         @media #{$desktop} {
             padding: 12.5vh 2rem 2rem 2rem;
         }
         @media #{$ip-land} {
             padding: 25vh 2rem 2rem 2rem;
+        }
+        @media #{$xlg-phone} {
+            padding: 10vh 2rem 2rem 2rem;
         }
         @media #{$ip-port} {
             padding: 15vh 2rem 2rem 2rem;
@@ -95,10 +98,13 @@
             shape-outside: polygon(0 69%, 100% 9%, 100% 100%, 0 80%);
             shape-margin: 4rem;
         }
+        @media #{$xlg-phone}{
+            //shape-outside: polygon(0 95%, 100% 25%, 100% 100%);
+            shape-outside: polygon(0 100%, 100% 31%, 100% 100%);
+            shape-margin: 4.5rem;
+        }
 
     }
-
-   
     
 }
 

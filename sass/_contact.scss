@@ -39,10 +39,13 @@
         padding-right: 5rem;
         padding-bottom: 3rem;
     }
+    @media #{$ipp-port}{
+        grid-template-columns: 40vw 1fr;    
 
-    @media #{$ipp-port}, #{$ip-port}{
+    }
+    @media #{$ipp-port}{
         margin-top: -8vh;
-        grid-template-columns: 40vw 1fr;
+        
         grid-row-gap: 0;
         padding-top: 10rem;
         padding-bottom: 5rem;
@@ -50,6 +53,8 @@
         background-position: bottom;    
         
     }
+
+
     @media #{$ip-land}{
         grid-row: 9 /11;
         margin-top: -20vh;
@@ -57,6 +62,25 @@
         grid-template-columns: 60vw 1fr;
         grid-template-rows: 1fr;
     }
+
+    @media #{$xlg-phone} {
+        grid-row: 11/13;
+    }
+
+        // @media #{$ip-port} {
+
+    //     margin-top: -8vh;
+        
+    //     grid-row-gap: 3rem;
+        
+    //     background-size: 120%;
+    //     background-position: bottom;    
+
+    //     grid-template-columns: 60vw 1fr;
+    //     padding-top: 17rem;
+    //     padding-bottom: 5rem;
+
+    // }
     &__main {
         grid-column: 2 /3;
         display: grid;
@@ -66,16 +90,21 @@
         @media #{$desktop} {
             grid-gap: 3.8rem;
         }
-        @media #{$ipp-port}, #{$ip-port}{
+        @media #{$ipp-port}{
             grid-gap: 5rem;
-            height: 70%;
-        }
-        @media #{$ip-port}{
-            margin-bottom: 3rem;
+            height: 100%;
         }
         @media #{$ip-land}{
             padding-top: 50vh;
         }
+        @media #{$xlg-phone} {
+            grid-gap: 3rem;
+            transform: translateY(20%);
+        }
+        @media #{$ip-port}{
+            transform: translateY(30%);
+        }
+
     }
     &__title{
         width: 100%;
@@ -150,12 +179,19 @@
         }
 
     }
-
 }
 .footer {
     grid-column: 1 /2;
     grid-row: 1/2;
 
+    align-self: end;
+    justify-self: center;
+    align-content: end;
+    color: $color-beige;
+    //border-right: 1px solid rgba($color-beige, .5);
+    padding-left: 5rem;
+
+    
     @media #{$ipp-land} {
         grid-column: 2 /3;
         grid-row: 2/3;
@@ -165,20 +201,22 @@
     @media #{$desktop} {
         padding-left: 15rem;
     }
-    @media #{$ipp-port}, #{$ip-port}{
+    @media #{$ipp-port}{
         grid-column: 1 /2;
         grid-row: 1/-1;
     }
-    @media #{$ip-port}{
-        margin-bottom: 3rem;
-    }
-    align-self: end;
-    justify-self: center;
-    color: $color-beige;
-    //border-right: 1px solid rgba($color-beige, .5);
-    padding-left: 5rem;
 
-    
+    @media #{$xlg-phone} {
+        transform: translateY(100%);
+    }
+    @media #{$ip-port}{
+        // margin-bottom: 3rem;
+        padding-top: 5rem;
+        grid-column: 2 /3;
+        grid-row: 2/3;
+        padding-left: 0;
+        transform: translateY(40%);
+    }
     &__logo{
         & img {
             width: 8rem;

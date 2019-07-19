@@ -27,18 +27,19 @@
         background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_m.jpg);
         background-size: auto;
         background-position: 50% 130%;
-        
     }
     @media #{$xlg-phone}{
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
+        background-position: 50% 90%;
     }
-
+    
     @media #{$ip-port}{
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
         background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_ipp.jpg);
         @include contain-top-fixed;
         background-size: 120%;
     }
+    
 
     h3 {
         color: $color-beige;

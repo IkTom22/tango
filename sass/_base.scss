@@ -86,9 +86,18 @@ body {
         grid-template-rows: repeat(12, 16.5vh);
         // grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     }
+    
     @media #{$ip-land} {
         grid-template-rows: repeat(10, 33vh);
     }
+    @media #{$xlg-phone}{
+        grid-template-rows: repeat(12, 33vh);
+    }
+    @media  #{$ip-port} {
+        grid-template-rows: repeat(12, 16.5vh);
+        
+    }
+
     // @media #{$ip-port}{
     //     grid-template-rows: repeat(12, 16.5vh);
     //     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];

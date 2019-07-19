@@ -17,12 +17,26 @@
     @media #{$ipp-port}{
         padding-top: 5%;
     }    
-    @media #{$ip-port}{
-        padding-top: 4%;
-    }
+    
     @media #{$ip-land}{
         grid-row: 9 /-1;
+        background-size: 200%;
+        background-position-x: 110%;
+        grid-gap: 5rem;
     }
+
+    @media #{$xlg-phone} {
+        grid-row: 11/13;
+        margin-top: -2%;
+        grid-gap: 3rem;
+    }
+    @media #{$ip-port}{
+        padding-top: 4%;
+
+    }
+
+
+
     grid-column: 1/-1;
     grid-row: 11 /-1;
     height: fit-content;

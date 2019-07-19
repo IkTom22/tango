@@ -20,6 +20,10 @@
         grid-row: 7/9;
         clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
     }
+    @media #{$xlg-phone} {
+        grid-row: 8/ 11;
+        clip-path: polygon(0 10%, 100% 50%, 100% 100%, 0 100%);
+    }
 
 
     & .section {  
@@ -47,6 +51,9 @@
         @media #{$ip-land} {
             padding-top: 27%;
         }
+        @media #{$xlg-phone} {
+            padding-top: 15%;
+        }
 
         @include quote;
         &::before {
@@ -65,12 +72,15 @@
             }
             @media #{$ipp-port}{
                 top: 15%;
+            }  
+            @media #{$ip-land} {
+                top: -8%;
+            }
+            @media #{$xlg-phone}{
+                top: -40%;
             }
             @media #{$ip-port} {
                 top: 22.5%;
-            }
-            @media #{$ip-land} {
-                top: -8%;
             }
         }
         position: relative;
@@ -87,9 +97,14 @@
 
     &__title {
         margin-bottom: 5rem; 
+        @media #{$xlg-phone} {
+            margin-bottom: 2rem; 
+        }
+
         @media #{$ip-port} {
             margin-bottom: 4rem; 
         }
+        
         @media #{$iphone-x}{
             margin-bottom: 3rem; 
         }
@@ -110,6 +125,10 @@
 
         &--title{
             margin-bottom: 1.8rem;
+            @media #{$xlg-phone} {
+                margin-bottom: 1rem; 
+            }
+
         }
 
         &--name {
@@ -118,6 +137,10 @@
             grid-template-columns: 10rem max-content;
             padding-top: 3rem;
             grid-gap: 1rem;
+            @media #{$xlg-phone} {
+                padding-top: 1rem;
+            }
+
             @media #{$ip-port} {
                 padding-top: 1.5rem;
             }
