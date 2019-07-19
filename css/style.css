@@ -261,14 +261,15 @@ body {
     .about {
       margin-top: -1%;
       clip-path: polygon(0 0, 100% 0, 100% 27vh, 0 100%); } }
+  @media (max-width: 812px) {
+    .about {
+      margin-top: -2%;
+      clip-path: polygon(0 0, 100% 0, 100% 29vh, 0 100%); } }
   @media (max-height: 1024px) and (max-width: 768px) {
     .about {
       grid-column: full-start /-1;
-      clip-path: polygon(0 0, 100% 0, 100% 16.5vh, 0 100%);
-      margin-top: 0; } }
-  @media (max-width: 812px) {
-    .about {
-      margin-top: -2%; } }
+      clip-path: polygon(0 0, 100% 0, 100% 19vh, 0 100%);
+      margin-top: -3%; } }
   .about__main {
     color: #fff4c4;
     padding: 15vh 2rem 2rem 2rem; }
@@ -328,6 +329,9 @@ body {
       .about__shape {
         shape-outside: polygon(0 100%, 100% 31%, 100% 100%);
         shape-margin: 4.5rem; } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .about__shape {
+        shape-margin: 8rem; } }
 
 .travel {
   grid-column: col-start 2/ -1;
@@ -372,10 +376,9 @@ body {
     .travel {
       grid-column: 1/ -1;
       grid-row: 5/7;
-      clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
-      background-position-x: 100%;
-      background-size: 80%;
-      background-position: 123% -0.5vh; } }
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 15vh);
+      background-size: 75%;
+      background-position: 140% 25%; } }
 
 .lessons {
   background-color: #4d0104;
@@ -481,15 +484,15 @@ body {
     @media (max-height: 1366px) and (max-width: 1024px) {
       .testimonials__main {
         padding-top: 65%; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
-      .testimonials__main {
-        padding-top: 75%; } }
     @media (max-height: 768px) and (max-width: 1024px) {
       .testimonials__main {
         padding-top: 27%; } }
     @media (max-width: 824px) {
       .testimonials__main {
         padding-top: 15%; } }
+    @media (max-height: 1024px) and (max-width: 768px) {
+      .testimonials__main {
+        padding-top: 75%; } }
     .testimonials__main::before {
       content: "\0201c";
       position: absolute;
@@ -532,12 +535,12 @@ body {
     @media (max-width: 824px) {
       .testimonials__title {
         margin-bottom: 2rem; } }
+    @media (max-width: 812px) {
+      .testimonials__title {
+        margin-bottom: 1.5rem; } }
     @media (max-height: 1024px) and (max-width: 768px) {
       .testimonials__title {
         margin-bottom: 4rem; } }
-    @media (max-width: 812px) {
-      .testimonials__title {
-        margin-bottom: 3rem; } }
   .testimonials__voice {
     font-style: italic;
     opacity: 0;
@@ -656,6 +659,12 @@ body {
   @media (max-width: 824px) {
     .contact {
       grid-row: 11/13; } }
+  @media (max-height: 1024px) and (max-width: 768px) {
+    .contact {
+      grid-row-gap: 3rem;
+      grid-template-columns: 50vw 1fr;
+      padding-top: 17rem;
+      padding-bottom: 5rem; } }
   .contact__main {
     grid-column: 2 /3;
     display: grid;
@@ -758,11 +767,10 @@ body {
       transform: translateY(100%); } }
   @media (max-height: 1024px) and (max-width: 768px) {
     .footer {
-      padding-top: 5rem;
-      grid-column: 2 /3;
-      grid-row: 2/3;
-      padding-left: 0;
-      transform: translateY(40%); } }
+      grid-column: 1 /2;
+      grid-row: 1/2;
+      transform: translateY(100%);
+      padding-left: 0; } }
   .footer__logo img {
     width: 8rem;
     opacity: .6; }
@@ -812,7 +820,7 @@ body {
       grid-gap: 3rem; } }
   @media (max-height: 1024px) and (max-width: 768px) {
     .fees {
-      padding-top: 4%; } }
+      padding-top: 8%; } }
   .fees__content {
     list-style: none;
     align-self: start; }

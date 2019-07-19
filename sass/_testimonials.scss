@@ -45,16 +45,16 @@
         @media #{$ipp-port}{
             padding-top: 65%;
         }
-        @media #{$ip-port}{
-            padding-top: 75%;
-        }
+        
         @media #{$ip-land} {
             padding-top: 27%;
         }
         @media #{$xlg-phone} {
             padding-top: 15%;
         }
-
+        @media #{$ip-port}{
+            padding-top: 75%;
+        }
         @include quote;
         &::before {
             font-size: 70rem;
@@ -100,14 +100,14 @@
         @media #{$xlg-phone} {
             margin-bottom: 2rem; 
         }
-
+        @media #{$iphone-x}{
+            margin-bottom: 1.5rem; 
+        }
         @media #{$ip-port} {
             margin-bottom: 4rem; 
         }
         
-        @media #{$iphone-x}{
-            margin-bottom: 3rem; 
-        }
+        
 
     }
     &__voice {  

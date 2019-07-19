@@ -31,12 +31,9 @@
         grid-gap: 3rem;
     }
     @media #{$ip-port}{
-        padding-top: 4%;
+        padding-top: 8%;
 
     }
-
-
-
     grid-column: 1/-1;
     grid-row: 11 /-1;
     height: fit-content;

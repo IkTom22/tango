@@ -67,20 +67,17 @@
         grid-row: 11/13;
     }
 
-        // @media #{$ip-port} {
-
-    //     margin-top: -8vh;
+        @media #{$ip-port} {
         
-    //     grid-row-gap: 3rem;
+        grid-row-gap: 3rem;
         
-    //     background-size: 120%;
-    //     background-position: bottom;    
+        // background-size: 120%;
+        // background-position: bottom;    
+        grid-template-columns: 50vw 1fr;
+        padding-top: 17rem;
+        padding-bottom: 5rem;
 
-    //     grid-template-columns: 60vw 1fr;
-    //     padding-top: 17rem;
-    //     padding-bottom: 5rem;
-
-    // }
+    }
     &__main {
         grid-column: 2 /3;
         display: grid;
@@ -211,11 +208,10 @@
     }
     @media #{$ip-port}{
         // margin-bottom: 3rem;
-        padding-top: 5rem;
-        grid-column: 2 /3;
-        grid-row: 2/3;
+        grid-column: 1 /2;
+        grid-row: 1/2;
+        transform: translateY(100%);
         padding-left: 0;
-        transform: translateY(40%);
     }
     &__logo{
         & img {

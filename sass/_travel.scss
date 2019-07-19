@@ -46,9 +46,9 @@
     @media #{$ip-port}{
         grid-column: 1/ -1;
         grid-row: 5/7;
-        clip-path: polygon(0 0, 100% 0, 100% 40vh, 0 15vh);
-        background-position-x: 100%;
-        background-size: 80%;
-        background-position: (123% -.5vh);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 15vh);
+        //background-position-x: 100%;
+        background-size: 75%;
+        background-position: 140% 25%;
     }
 }
