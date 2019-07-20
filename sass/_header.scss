@@ -32,14 +32,18 @@
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
         background-position: 50% 90%;
     }
-    
     @media #{$ip-port}{
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
         background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_ipp.jpg);
         @include contain-top-fixed;
         background-size: 120%;
     }
-    
+    @media #{$xlg-phone-port}{
+        clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 39vh);
+        background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 50%, rgba(190, 5, 5, 0.9) 50%), url(../image/tango-lesson_ipp.jpg);
+        background-size: 185%;
+        background-position: 50% 0;
+    }
 
     h3 {
         color: $color-beige;
@@ -76,7 +80,11 @@
             transform: translate(5%, 95%) rotate(-15deg);
             font-size: 11rem;
         }
-
+        @media #{$xlg-phone-port}{
+            font-size: 6rem;
+            transform: translate(30%, 420%) rotate(0);
+            color: rgba($color-beige, .6);
+        }
         
     }
     &__mainbox{
@@ -86,6 +94,13 @@
         top: 10%;
         right: 5%;
         grid-gap: 2.5rem;
+        height: 70%;
+        width: 30%; 
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
         @media #{$desktop} {
             grid-gap: 2rem;
             width: 30%;
@@ -94,15 +109,13 @@
         @media #{$ip-port}{
             right: 4%;
         }
-        height: 70%;
-        width: 30%;
-        
-        align-content: center;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        text-align: center;
 
+        @media #{$xlg-phone-port}{
+            right: 0;
+            width: 100%;
+            grid-gap: 1rem;
+            top: 5%;
+        }
     }
 
     &__logo {

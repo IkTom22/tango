@@ -53,8 +53,6 @@
         background-position: bottom;    
         
     }
-
-
     @media #{$ip-land}{
         grid-row: 9 /11;
         margin-top: -20vh;
@@ -66,8 +64,7 @@
     @media #{$xlg-phone} {
         grid-row: 11/13;
     }
-
-        @media #{$ip-port} {
+    @media #{$ip-port} {
         
         grid-row-gap: 3rem;
         
@@ -76,7 +73,11 @@
         grid-template-columns: 50vw 1fr;
         padding-top: 17rem;
         padding-bottom: 5rem;
+    }
 
+    @media #{$xlg-phone-port}{
+        grid-row: 13/-1;
+        clip-path: polygon(0 100%, 100% 16%, 100% 100%);
     }
     &__main {
         grid-column: 2 /3;

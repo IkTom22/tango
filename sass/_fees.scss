@@ -6,6 +6,20 @@
     background-position-y: -20%;
     background-repeat: no-repeat;
 
+    grid-column: 1/-1;
+    grid-row: 11 /-1;
+    height: fit-content;
+    color: $color-beige;
+    display: grid;
+    grid-gap: 5rem;
+   
+    padding-top: 3rem;
+    padding-left: 5rem;
+    align-items: end;
+    align-content: start;
+    width: 100%;
+    height: 150%;
+
     @media #{$ipp-land} {
         background-size: 200%;
         background-position-x: 80%;
@@ -24,7 +38,6 @@
         background-position-x: 110%;
         grid-gap: 5rem;
     }
-
     @media #{$xlg-phone} {
         grid-row: 11/13;
         margin-top: -2%;
@@ -32,21 +45,13 @@
     }
     @media #{$ip-port}{
         padding-top: 8%;
-
     }
-    grid-column: 1/-1;
-    grid-row: 11 /-1;
-    height: fit-content;
-    color: $color-beige;
-    display: grid;
-    grid-gap: 5rem;
-   
-    padding-top: 3rem;
-    padding-left: 5rem;
-    align-items: end;
-    align-content: start;
-    width: 100%;
-    height: 150%;
+    @media #{$xlg-phone-port}{
+        grid-row: 13/-1;
+        background-position: 50% 0;
+        background-size: 300%;
+        clip-path: polygon(0 0, 100% 16%, 0 100%);
+    }
     &__content{
         list-style: none;
         align-self: start;
@@ -64,7 +69,8 @@
             grid-gap: 1rem;
             font-size: 1.8rem;
         }
-
-    }
-
+        @media #{$xlg-phone-port}{
+            display: block;
+        }
+    }   
 }

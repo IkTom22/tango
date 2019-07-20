@@ -24,6 +24,10 @@
         grid-row: 8/ 11;
         clip-path: polygon(0 10%, 100% 50%, 100% 100%, 0 100%);
     }
+    @media #{$xlg-phone-port} {
+        grid-row: 10/ 14;
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    }
 
 
     & .section {  
@@ -55,6 +59,13 @@
         @media #{$ip-port}{
             padding-top: 75%;
         }
+        @media #{$xlg-phone-port} {
+            
+            width: 90%;
+            padding-top: 0;
+            margin-top: 35%;
+        }
+
         @include quote;
         &::before {
             font-size: 70rem;
@@ -80,7 +91,10 @@
                 top: -40%;
             }
             @media #{$ip-port} {
-                top: 22.5%;
+                
+            }
+            @media #{$xlg-phone-port} {
+                top: -25%; 
             }
         }
         position: relative;
@@ -106,7 +120,11 @@
         @media #{$ip-port} {
             margin-bottom: 4rem; 
         }
-        
+        @media #{$xlg-phone-port} {
+            margin-bottom: 2rem;
+            margin-top: 5rem;
+           
+        }
         
 
     }
@@ -122,6 +140,10 @@
         @media #{$ip-port} {
             font-size: 2rem;
         }
+        @media #{$xlg-phone-port} {
+            font-size: 1.7rem;
+        }
+        
 
         &--title{
             margin-bottom: 1.8rem;

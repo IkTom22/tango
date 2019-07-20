@@ -17,10 +17,7 @@
 
     @media #{$desktop}{
         padding-top: 5rem;
-    }
-
-
-    
+    } 
     @media #{$ip-land}{
         grid-row: 5/8;
         padding-top: 15%;
@@ -30,18 +27,19 @@
     @media #{$xlg-phone}{
         grid-row: 5/9;
     }
-    // @media #{$ip-port}{
-    //     background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_ipp_2.jpg);
-    //    // padding-top: 17rem;
-    //     background-position-y: 5%;
-    //     margin-bottom: -35%;
-    //     background-position-y: 600%; 
-    //     background-attachment: fixed;
-    //     background-size: auto;
-    //     background-repeat: no-repeat;  
-    // }
+    @media #{$xlg-phone-port}{
+        margin-top: -10%;
+        grid-row: 5/11;
+        text-align: end;
+        background-repeat: no-repeat;
+        background-size: 220%;
+        background-position: 70% -9%;
+       
+    }
+
     &__title {
         padding-bottom: 3rem;
+
         @media #{$desktop} {
             padding-bottom: 0;
             padding-top: 1rem;
@@ -51,6 +49,17 @@
             font-size: 2.9rem;
             padding-top: 2rem;
             width: 80%;
+        }
+        @media #{$xlg-phone-port}{
+            padding-top: 0;
+            &::after {
+                // content: "";
+                // display: block;
+                // height: 2px;
+                // background-color: currentColor;
+                width: 80%;  
+                margin-left: 20%;
+            }
         }
 
     }

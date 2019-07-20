@@ -51,4 +51,7 @@
         background-size: 75%;
         background-position: 140% 25%;
     }
+    @media #{$xlg-phone-port}{
+        display: none;
+    }
 }
