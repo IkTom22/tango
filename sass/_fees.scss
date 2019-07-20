@@ -49,8 +49,9 @@
     @media #{$xlg-phone-port}{
         grid-row: 13/-1;
         background-position: 50% 0;
-        background-size: 300%;
-        clip-path: polygon(0 0, 100% 16%, 0 100%);
+        background-size: 400%;
+        clip-path: polygon(0 0, 100% 10%, 0 100%);
+        padding-top: 10%;
     }
     &__content{
         list-style: none;

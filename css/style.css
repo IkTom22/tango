@@ -425,7 +425,7 @@ body {
       display: none; } }
 
 .lessons {
-  background-color: #4d0104;
+  background-color: linear-gradient(black, rgba(21, 138, 138, 0.7));
   background-image: linear-gradient(rgba(35, 31, 32, 0.4), rgba(17, 1, 1, 0.7)), url(../image/tango-teachers_lg.jpg);
   background-repeat: none;
   background-attachment: fixed;
@@ -459,8 +459,8 @@ body {
       grid-row: 5/11;
       text-align: end;
       background-repeat: no-repeat;
-      background-size: 220%;
-      background-position: 70% -9%; } }
+      background-size: 250%;
+      background-position: 70% -5%; } }
   .lessons__title {
     padding-bottom: 3rem; }
     @media (max-width: 1024px) {
@@ -742,7 +742,10 @@ body {
   @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
     .contact {
       grid-row: 13/-1;
-      clip-path: polygon(0 100%, 100% 16%, 100% 100%); } }
+      clip-path: polygon(0 80%, 100% 0, 100% 100%, 0 100%);
+      grid-row-gap: 2rem;
+      background-size: 180%;
+      padding-right: 4.2rem; } }
   .contact__main {
     grid-column: 2 /3;
     display: grid;
@@ -765,6 +768,10 @@ body {
     @media (max-height: 1024px) and (max-width: 768px) {
       .contact__main {
         transform: translateY(30%); } }
+    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      .contact__main {
+        transform: translateY(30%);
+        grid-gap: 2rem; } }
   .contact__title {
     width: 100%; }
     .contact__title::after {
@@ -780,12 +787,19 @@ body {
     @media (min-height: 1024px) and (max-width: 1366px) {
       .contact__details {
         font-size: 2.3rem; } }
+    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      .contact__details {
+        width: 50%;
+        transform: translateX(85%); } }
   .contact__detail {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-column-gap: 2rem;
     align-items: end;
     justify-items: end; }
+    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      .contact__detail {
+        grid-template-columns: max-content 1fr; } }
   .contact__icon {
     width: 3rem;
     height: 3rem;
@@ -794,6 +808,11 @@ body {
       .contact__icon {
         width: 3.5rem;
         height: 3.5rem; } }
+    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      .contact__icon {
+        transform: translateX(8rem); }
+        .contact__icon--last {
+          transform: translateX(0); } }
   .contact__links {
     width: 100%;
     display: grid;
@@ -803,6 +822,10 @@ body {
     justify-items: end;
     justify-content: end;
     align-content: end; }
+    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      .contact__links {
+        width: 60%;
+        margin-left: 40%; } }
   .contact__link {
     width: 3rem;
     height: 3rem;
@@ -842,16 +865,24 @@ body {
       grid-row: 1/-1; } }
   @media (max-width: 824px) {
     .footer {
-      transform: translateY(100%); } }
+      transform: translateY(105%); } }
   @media (max-height: 1024px) and (max-width: 768px) {
     .footer {
       grid-column: 1 /2;
       grid-row: 1/2;
       transform: translateY(100%);
       padding-left: 0; } }
+  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    .footer {
+      grid-column: 2/3;
+      grid-row: 2/3;
+      width: 100vw; } }
   .footer__logo img {
     width: 8rem;
     opacity: .6; }
+    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      .footer__logo img {
+        width: 5rem; } }
   .footer__copyright {
     color: rgba(255, 244, 196, 0.6); }
 
@@ -903,8 +934,9 @@ body {
     .fees {
       grid-row: 13/-1;
       background-position: 50% 0;
-      background-size: 300%;
-      clip-path: polygon(0 0, 100% 16%, 0 100%); } }
+      background-size: 400%;
+      clip-path: polygon(0 0, 100% 10%, 0 100%);
+      padding-top: 10%; } }
   .fees__content {
     list-style: none;
     align-self: start; }

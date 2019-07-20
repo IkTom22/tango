@@ -1,6 +1,6 @@
 .lessons {
     //background-color: $color-beige;
-    background-color: $color-red-dark;
+    background-color: linear-gradient(black, rgba($color-green-dark, .7));
     background-image: linear-gradient(rgba($color-black, .4), rgba($color-red-darkest, .7)), url(../image/tango-teachers_lg.jpg);
     //background-image: linear-gradient(rgba($color-red-dark, .7), rgba($color-red-deep-dark, .7)), url(../image/test-tango-landing.png);
     
@@ -32,8 +32,8 @@
         grid-row: 5/11;
         text-align: end;
         background-repeat: no-repeat;
-        background-size: 220%;
-        background-position: 70% -9%;
+        background-size: 250%;
+        background-position: 70% -5%;
        
     }
 
