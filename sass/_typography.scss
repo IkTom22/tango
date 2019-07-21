@@ -5,7 +5,7 @@
     @extend %heading;
     font-size: 4.5rem;
     letter-spacing: .3rem;
-
+    margin: 0;
     @media #{$ip-port}{
         font-size: 3.5rem;
     }

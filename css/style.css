@@ -56,7 +56,8 @@ body {
 
 .heading-1 {
   font-size: 4.5rem;
-  letter-spacing: .3rem; }
+  letter-spacing: .3rem;
+  margin: 0; }
   @media (max-height: 1024px) and (max-width: 768px) {
     .heading-1 {
       font-size: 3.5rem; } }
