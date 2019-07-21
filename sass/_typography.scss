@@ -1,6 +1,9 @@
 %heading {
     font-family: $font-display;
 }
+h1{
+    margin:0;
+}
 .heading-1{
     @extend %heading;
     font-size: 4.5rem;
