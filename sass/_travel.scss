@@ -51,7 +51,10 @@
         background-size: 75%;
         background-position: 140% 25%;
     }
-    @media #{$xlg-phone-port}{
+    @media #{$sphone-land}{
         display: none;
     }
+    // @media #{$xlg-phone-port}{
+    //     display: none;
+    // }
 }

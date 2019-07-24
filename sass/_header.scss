@@ -41,6 +41,10 @@
         @include contain-top-fixed;
         background-size: 120%;
     }
+    @media #{$sphone-land}{
+        clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
+        background-position: 50% 90%;
+    }
     @media #{$xlg-phone-port}{
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 39vh);
         background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 50%, rgba(190, 5, 5, 0.9) 50%), url(../image/tango-lesson_ipp.jpg);
@@ -83,6 +87,10 @@
             transform: translate(5%, 95%) rotate(-15deg);
             font-size: 11rem;
         }
+        @media #{$sphone-land}{
+            transform: translate(5%, 45%) rotate(-15deg);
+        }
+
         @media #{$xlg-phone-port}{
             font-size: 6rem;
             transform: translate(30%, 420%) rotate(0);
@@ -93,7 +101,7 @@
     &__mainbox{
         display: grid;
         position: absolute;
-        z-index: 1000;
+        z-index: 600;
         top: 10%;
         right: 5%;
         grid-gap: 2.5rem;

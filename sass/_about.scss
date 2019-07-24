@@ -36,6 +36,14 @@
         clip-path: polygon(0 0, 100% 0, 100% 19vh, 0 100%);
         margin-top: -3%;
     }
+    @media #{$sphone-land}{
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+        background-image: linear-gradient(rgba($color-green-darkest, .6),  rgba($color-red-darkest, .9)), url(../image/geoffandBeth-lg.png);
+        //background-image: linear-gradient(rgba($color-green-dark, .6),  rgba($color-green-dark, .9)), url(../image/geoffandBeth-lg.png);
+        background-size: 100%;
+        background-position: 70% 10%;
+        background-repeat: no-repeat;
+    }
     @media #{$xlg-phone-port}{
         clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
         margin-top: 12%;
@@ -123,6 +131,10 @@
         @media #{$ip-port}{
             shape-margin: 8rem;
         }
+        @media #{$sphone-land}{
+            shape-outside: polygon(0 100%, 100% 70%, 100% 100%);  
+        }
+
         @media #{$xlg-phone-port}{
             shape-outside: polygon(0 90%, 100% 70%, 100% 100%, 0 100%);
             shape-margin: 3.5rem;

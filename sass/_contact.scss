@@ -103,10 +103,13 @@
             transform: translateY(20%);
         }
         @media #{$ip-port}{
-            transform: translateY(30%);
+            transform: translateY(1%);
+        }
+        @media #{$sphone-land}{
+            transform: translateY(5%);
         }
         @media #{$xlg-phone-port}{
-            transform: translateY(30%);
+            transform: translateY(2%);
             grid-gap: 2rem;
         }
 
@@ -233,8 +236,11 @@
         // margin-bottom: 3rem;
         grid-column: 1 /2;
         grid-row: 1/2;
-        transform: translateY(100%);
+        transform: translateY(10%);
         padding-left: 0;
+    }
+    @media #{$sphone-land}{
+        justify-self: end;
     }
     @media #{$xlg-phone-port}{
         grid-column: 2/3;

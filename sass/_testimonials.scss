@@ -24,6 +24,9 @@
         grid-row: 8/ 11;
         clip-path: polygon(0 10%, 100% 50%, 100% 100%, 0 100%);
     }
+    @media #{$sphone-land}{
+        clip-path: polygon(0 20%, 100% 50%, 100% 100%, 0 100%);
+    }
     @media #{$xlg-phone-port} {
         grid-row: 10/ 14;
         clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
@@ -59,6 +62,10 @@
         @media #{$ip-port}{
             padding-top: 75%;
         }
+        @media #{$sphone-land}{
+            padding-top: 20%;
+            width: 90%;
+        }
         @media #{$xlg-phone-port} {
             
             width: 90%;
@@ -91,7 +98,10 @@
                 top: -40%;
             }
             @media #{$ip-port} {
-                
+                top: 22%;
+            }
+            @media #{$sphone-land}{
+                top: -20%;
             }
             @media #{$xlg-phone-port} {
                 top: -25%; 
@@ -120,10 +130,12 @@
         @media #{$ip-port} {
             margin-bottom: 4rem; 
         }
+        @media #{$sphone-land}{
+            margin-bottom: 2rem;
+        }
         @media #{$xlg-phone-port} {
             margin-bottom: 2rem;
             margin-top: 5rem;
-           
         }
         
 
@@ -139,6 +151,9 @@
         }
         @media #{$ip-port} {
             font-size: 2rem;
+        }
+        @media #{$sphone-land}{
+            font-size: 1.7rem;
         }
         @media #{$xlg-phone-port} {
             font-size: 1.7rem;
@@ -166,6 +181,10 @@
             @media #{$ip-port} {
                 padding-top: 1.5rem;
             }
+            @media #{$sphone-land}{
+                padding-top: 1rem;
+            }
+
             &::before{
                 content: "";
                 display: block;

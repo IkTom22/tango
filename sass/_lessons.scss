@@ -26,7 +26,13 @@
 
     @media #{$xlg-phone}{
         grid-row: 5/9;
+        grid-gap: 1rem;
+        
     }
+    @media #{$sphone-land}{
+        text-align: end;
+    }
+
     @media #{$xlg-phone-port}{
         margin-top: -10%;
         grid-row: 5/11;
@@ -50,13 +56,16 @@
             padding-top: 2rem;
             width: 80%;
         }
+        @media #{$sphone-land}{
+            &::after {
+
+                width: 80%;  
+                margin-left: 20%;
+            }
+        }
         @media #{$xlg-phone-port}{
             padding-top: 0;
             &::after {
-                // content: "";
-                // display: block;
-                // height: 2px;
-                // background-color: currentColor;
                 width: 80%;  
                 margin-left: 20%;
             }
@@ -74,8 +83,9 @@
             @media #{$ipp-port}{
                 padding-bottom: 0;
             }
+
             @media #{$xlg-phone}{
-                letter-spacing: 0;
+                //letter-spacing: 0;
                 padding-bottom: 1.5rem;
                 
             }

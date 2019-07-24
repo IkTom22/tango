@@ -46,6 +46,13 @@
     @media #{$ip-port}{
         padding-top: 8%;
     }
+
+    @media #{$sphone-land}{
+        padding-top: 5%;
+        grid-gap: 2rem;
+    }
+    
+
     @media #{$xlg-phone-port}{
         grid-row: 13/-1;
         background-position: 50% 0;

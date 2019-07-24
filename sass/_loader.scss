@@ -1,0 +1,88 @@
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: linear-gradient($color-red-darkest, $color-red-dark, $color-red-deep-dark, $color-red-dark, $color-red-darkest);
+    z-index: 2000;
+    top:0;
+    left: 0;
+}
+
+.hidden {
+    animation: fadeOut 1s forwards;
+}
+.loading {
+	position: absolute;
+	width: 600px;
+	height: 35px;
+	left: 50%;
+	top: 40%;
+	overflow: visible;
+	margin-left: -32rem;
+    z-index: 2030;
+    & div {
+        color: $color-beige;
+        width: 2rem;
+        height: 3.5rem;
+        position:absolute;
+        font-size: 2.2rem;
+        opacity: 0;
+        transform: rotate(180deg);
+        animation: following 4s linear infinite;
+    }
+    & div:nth-child(2){
+        animation-delay: 0.2s;
+    }
+    & div:nth-child(3){
+        animation-delay: 0.4s;
+    }
+    & div:nth-child(4){
+        animation-delay: 0.6s;
+    }
+    & div:nth-child(5){
+        animation-delay: 0.8s;
+    }
+    & div:nth-child(6){
+        animation-delay: 1s;
+    }
+    
+    & div:nth-child(7){
+        animation-delay: 1.2s;
+    }
+
+}
+
+
+@keyframes following {
+	0% {
+		left: 0;
+		transform: scale(0) rotate(180deg);
+		opacity: 0;
+		
+	}
+	35% {
+		left: 41%;
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+	}
+	60% {
+		left: 58%;
+		transform: scale(1) rotate(0deg);
+		opacity: 1;
+		
+	}
+	100% {
+		left: 100%;
+		transform: scale(0) rotate(-180deg);
+		opacity: 0;
+		
+	}
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
