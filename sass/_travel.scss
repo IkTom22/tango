@@ -4,8 +4,6 @@
     background-color: $color-green-background; 
     clip-path:polygon(0 0, 100% 0, 100% 100vh, 0 35vh);
 
-   
-
     margin-top: -17vh;
     background-image: linear-gradient(to bottom right, rgba($color-green-light, .4), rgba($color-green-dark, .7), rgba($color-green-mid-dark, .9)), url(../image/geoffandBeth-lg.png);
     background-repeat: no-repeat;
@@ -51,7 +49,7 @@
         background-size: 75%;
         background-position: 140% 25%;
     }
-    @media #{$sphone-land}{
+    @media #{$mphone-land}{
         display: none;
     }
     // @media #{$xlg-phone-port}{

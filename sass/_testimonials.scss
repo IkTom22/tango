@@ -62,7 +62,7 @@
         @media #{$ip-port}{
             padding-top: 75%;
         }
-        @media #{$sphone-land}{
+        @media #{$mphone-land}{
             padding-top: 20%;
             width: 90%;
         }
@@ -100,7 +100,7 @@
             @media #{$ip-port} {
                 top: 22%;
             }
-            @media #{$sphone-land}{
+            @media #{$mphone-land}{
                 top: -20%;
             }
             @media #{$xlg-phone-port} {
@@ -130,7 +130,7 @@
         @media #{$ip-port} {
             margin-bottom: 4rem; 
         }
-        @media #{$sphone-land}{
+        @media #{$mphone-land}{
             margin-bottom: 2rem;
         }
         @media #{$xlg-phone-port} {

@@ -41,10 +41,15 @@
         @include contain-top-fixed;
         background-size: 120%;
     }
-    @media #{$sphone-land}{
+
+    @media #{$mphone-land}{
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
         background-position: 50% 90%;
     }
+    // @media #{$sphone-land}{
+    //     clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
+    //     background-position: 50% 90%;
+    // }
     @media #{$xlg-phone-port}{
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 39vh);
         background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 50%, rgba(190, 5, 5, 0.9) 50%), url(../image/tango-lesson_ipp.jpg);
@@ -96,6 +101,9 @@
             transform: translate(30%, 420%) rotate(0);
             color: rgba($color-beige, .6);
         }
+        @media #{$xs-phone-land}{
+            font-size: 9.5rem;
+        }
         
     }
     &__mainbox{
@@ -120,13 +128,16 @@
         @media #{$ip-port}{
             right: 4%;
         }
-
+        @media #{$xs-phone-land}{
+            grid-gap: 1rem;
+        }
         @media #{$xlg-phone-port}{
             right: 0;
             width: 100%;
             grid-gap: 1rem;
             top: 5%;
         }
+        
     }
 
     &__logo {
@@ -139,21 +150,30 @@
         @media #{$ip-land} {
             width: 12rem;
         }
+        @media #{$xs-phone-land}{
+            width: 9rem;
+        }
+
+
     }
     &__sub {
       
        color: $color-beige;
        text-transform: capitalize;
-       & span {
-           padding: 1rem 1.5rem;
- 
-
+       padding: 1rem 1.5rem;
+  
         @media #{$ipp-land} {
             font-size: 3.5rem;
         }
         
         @media #{$ip-port}{
             font-size: 2.5rem;
+       
+        & span {
+
+            @media #{$xs-phone-land}{
+                display: none;
+            }
         }
 
        }

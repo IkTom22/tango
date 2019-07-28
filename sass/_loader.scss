@@ -1,10 +1,9 @@
-
 .loader{
     width: 100vw;
     height: 100vh;
     position: fixed;
     background-image: linear-gradient($color-red-darkest, $color-red-dark, $color-red-deep-dark, $color-red-dark, $color-red-darkest);
-    z-index: 2000;
+    z-index: 2001;
     top:0;
     left: 0;
 }

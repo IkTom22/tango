@@ -239,7 +239,7 @@
         transform: translateY(10%);
         padding-left: 0;
     }
-    @media #{$sphone-land}{
+    @media #{$mphone-land}{
         justify-self: end;
     }
     @media #{$xlg-phone-port}{

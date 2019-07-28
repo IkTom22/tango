@@ -12,6 +12,9 @@ h1{
     @media #{$ip-port}{
         font-size: 3.5rem;
     }
+    @media #{$xs-phone-land}{
+        font-size: 3rem;
+    }
 }
 .heading-2{
     @extend %heading;
@@ -63,6 +66,10 @@ h1{
         font-size: 2rem;
         letter-spacing: .1rem;
     }
+    @media #{$xs-phone-land}{
+        font-style: italic;
+        font-size: 1.7rem;
+    }   
     
 }
 

@@ -100,12 +100,16 @@ body {
     @media #{$xlg-phone}{
         grid-template-rows: repeat(12, 33vh);
     }
+   
     @media  #{$ip-port} {
         grid-template-rows: repeat(12, 16.5vh);    
     }
-    @media #{$sphone-land}{
+    @media #{$mphone-land}{
         grid-template-rows: repeat(12, 33vh);
-    }
+    }   
+    // @media #{$sphone-land}{
+    //     grid-template-rows: repeat(12, 33vh);
+    // }
     @media #{$xlg-phone-port}{
         grid-template-rows: repeat(15, 16.5vh);
     }
