@@ -26,7 +26,7 @@ body {
   background-color: #036161;
   overflow-x: hidden;
   position: relative; }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     body {
       line-height: 1.3; } }
 
@@ -35,8 +35,9 @@ body {
   display: grid;
   grid-template-rows: repeat(12, 33vh);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  background-color: #036161;
   overflow: hidden; }
-  @media (max-height: 1366px) and (max-width: 1024px), (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1366px) and (max-width: 1024px), (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .container {
       grid-template-rows: repeat(12, 16.5vh); } }
   @media (max-height: 768px) and (max-width: 1024px) {
@@ -45,15 +46,22 @@ body {
   @media (max-width: 824px) {
     .container {
       grid-template-rows: repeat(12, 33vh); } }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .container {
       grid-template-rows: repeat(12, 16.5vh); } }
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (orientation: landscape) {
     .container {
       grid-template-rows: repeat(12, 33vh); } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .container {
       grid-template-rows: repeat(15, 16.5vh); } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .container {
+      grid-template-rows: repeat(10, 33vh); } }
+  @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+    .container {
+      grid-auto-rows: 33vh;
+      grid-template-rows: repeat(auto-fill, 33vh); } }
 
 .heading-1, .heading-2, .heading-3 {
   font-family: "Voltaire", sans-serif; }
@@ -65,12 +73,15 @@ h1 {
   font-size: 4.5rem;
   letter-spacing: .3rem;
   margin: 0; }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .heading-1 {
       font-size: 3.5rem; } }
-  @media (max-width: 568px) {
+  @media (max-width: 568px) and (orientation: landscape) {
     .heading-1 {
       font-size: 3rem; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .heading-1 {
+      font-size: 4rem; } }
 
 .heading-2 {
   font-size: 4rem;
@@ -110,7 +121,7 @@ h1 {
       font-weight: 300;
       font-size: 2rem;
       letter-spacing: .1rem; } }
-  @media (max-width: 568px) {
+  @media (max-width: 568px) and (orientation: landscape) {
     .sub-3 {
       font-style: italic;
       font-size: 1.7rem; } }
@@ -236,7 +247,7 @@ h1 {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
       background-position: 50% 90%; } }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
       background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 60%, rgba(190, 5, 5, 0.9) 60%), url(../image/tango-lesson_ipp.jpg);
@@ -245,13 +256,19 @@ h1 {
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: 120%; } }
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (orientation: landscape) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
       background-position: 50% 90%; } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 39vh);
+      background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 50%, rgba(190, 5, 5, 0.9) 50%), url(../image/tango-lesson_ipp.jpg);
+      background-size: 185%;
+      background-position: 50% 0; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .header {
+      clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 45vh);
       background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 50%, rgba(190, 5, 5, 0.9) 50%), url(../image/tango-lesson_ipp.jpg);
       background-size: 185%;
       background-position: 50% 0; } }
@@ -279,19 +296,28 @@ h1 {
     @media (max-width: 824px) {
       .header__name {
         transform: translate(5%, 45%) rotate(-10deg); } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .header__name {
         transform: translate(5%, 95%) rotate(-15deg);
         font-size: 11rem; } }
-    @media (max-width: 667px) {
+    @media (max-width: 768px) and (orientation: landscape) {
+      .header__name {
+        transform: translate(5%, 60%) rotate(-15deg); } }
+    @media (max-width: 667px) and (orientation: landscape) {
       .header__name {
         transform: translate(5%, 45%) rotate(-15deg); } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .header__name {
         font-size: 6rem;
         transform: translate(30%, 420%) rotate(0);
         color: rgba(255, 244, 196, 0.6); } }
-    @media (max-width: 568px) {
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .header__name {
+        display: none; } }
+    @media (max-width: 667px) and (orientation: landscape) {
+      .header__name {
+        font-size: 10rem; } }
+    @media (max-width: 568px) and (orientation: landscape) {
       .header__name {
         font-size: 9.5rem; } }
   .header__mainbox {
@@ -312,18 +338,27 @@ h1 {
       .header__mainbox {
         grid-gap: 2rem;
         width: 30%; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .header__mainbox {
         right: 4%; } }
-    @media (max-width: 568px) {
+    @media (max-width: 568px) and (orientation: landscape) {
       .header__mainbox {
         grid-gap: 1rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .header__mainbox {
         right: 0;
         width: 100%;
         grid-gap: 1rem;
         top: 5%; } }
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .header__mainbox {
+        right: 0;
+        width: 100%;
+        grid-gap: 1rem;
+        top: -5%; } }
+    @media (max-width: 667px) and (orientation: landscape) {
+      .header__mainbox {
+        grid-gap: 0; } }
   .header__logo {
     width: 25rem;
     opacity: .9; }
@@ -334,9 +369,12 @@ h1 {
     @media (max-height: 768px) and (max-width: 1024px) {
       .header__logo {
         width: 12rem; } }
-    @media (max-width: 568px) {
+    @media (max-width: 568px) and (orientation: landscape) {
       .header__logo {
         width: 9rem; } }
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .header__logo {
+        width: 10rem; } }
   .header__sub {
     color: #fff4c4;
     text-transform: capitalize;
@@ -344,10 +382,10 @@ h1 {
     @media (min-height: 1024px) and (max-width: 1366px) {
       .header__sub {
         font-size: 3.5rem; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .header__sub {
         font-size: 2.5rem; } }
-  @media (max-height: 1024px) and (max-width: 768px) and (max-width: 568px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) and (max-width: 568px) and (orientation: landscape) {
     .header__sub span {
       display: none; } }
   .header h1 {
@@ -388,12 +426,13 @@ h1 {
     .about {
       margin-top: -2%;
       clip-path: polygon(0 0, 100% 0, 100% 29vh, 0 100%); } }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .about {
       grid-column: full-start /-1;
+      background-image: none;
       clip-path: polygon(0 0, 100% 0, 100% 19vh, 0 100%);
       margin-top: -3%; } }
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (orientation: landscape) {
     .about {
       clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
       background-image: linear-gradient(rgba(3, 97, 97, 0.6), rgba(17, 1, 1, 0.9)), url(../image/geoffandBeth-lg.png);
@@ -401,10 +440,10 @@ h1 {
       background-position: 70% 10%;
       background-repeat: no-repeat;
       margin-top: -1%; } }
-  @media (max-width: 667px) {
+  @media (max-width: 667px) and (orientation: landscape) {
     .about {
       margin-top: -3%; } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .about {
       clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
       margin-top: 12%;
@@ -412,6 +451,23 @@ h1 {
       background-size: 130%;
       background-position: 70% 90%;
       background-repeat: no-repeat; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .about {
+      grid-row: 2/4;
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+      background-image: linear-gradient(rgba(10, 0, 2, 0.6), rgba(10, 0, 2, 0.9)), url(../image/geoffandBeth-lg.png);
+      background-size: 130%;
+      background-position: 70% 90%;
+      background-repeat: no-repeat;
+      padding: 2rem;
+      margin-top: 10%; } }
+  @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+    .about {
+      background-image: linear-gradient(rgba(3, 97, 97, 0.6), rgba(17, 1, 1, 0.9)), url(../image/geoffandBeth-lg.png);
+      grid-row: 2/5;
+      background-size: 165%;
+      background-position: 90% 20%;
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 0 80%); } }
   .about__main {
     color: #fff4c4;
     padding: 15vh 2rem 2rem 2rem; }
@@ -430,12 +486,15 @@ h1 {
     @media (max-width: 824px) {
       .about__main {
         padding: 10vh 2rem 2rem 2rem; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .about__main {
         padding: 15vh 2rem 2rem 2rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .about__main {
         padding: 20% 2rem 2rem 2rem; } }
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .about__main {
+        padding: 10% 2rem 2rem 2rem; } }
   .about__title {
     padding-top: 2rem;
     padding-bottom: 5rem; }
@@ -452,7 +511,7 @@ h1 {
     @media (max-width: 812px) {
       .about__title {
         padding-top: 10rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .about__title {
         padding-top: 2rem; } }
   .about__shape {
@@ -477,16 +536,21 @@ h1 {
       .about__shape {
         shape-outside: polygon(0 100%, 100% 31%, 100% 100%);
         shape-margin: 4.5rem; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .about__shape {
-        shape-margin: 8rem; } }
-    @media (max-width: 768px) {
+        shape-margin: 10rem;
+        shape-outside: polygon(0 100%, 100% 40%, 100% 100%); } }
+    @media (max-width: 768px) and (orientation: landscape) {
       .about__shape {
         shape-outside: polygon(0 100%, 100% 70%, 100% 100%); } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .about__shape {
         shape-outside: polygon(0 90%, 100% 70%, 100% 100%, 0 100%);
         shape-margin: 3.5rem; } }
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .about__shape {
+        shape-margin: 3rem;
+        shape-outside: polygon(0 100%, 100% 80%, 100% 100%); } }
 
 .travel {
   grid-column: col-start 2/ -1;
@@ -527,14 +591,21 @@ h1 {
       background-position-y: 4%;
       background-size: 89%;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 35%); } }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .travel {
       grid-column: 1/ -1;
       grid-row: 5/7;
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0 15vh);
       background-size: 75%;
-      background-position: 140% 25%; } }
-  @media (max-width: 768px) {
+      background-position: 140% 25%;
+      display: block; } }
+  @media (max-width: 768px) and (orientation: landscape) {
+    .travel {
+      display: none; } }
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
+    .travel {
+      display: none; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
     .travel {
       display: none; } }
 
@@ -568,10 +639,16 @@ h1 {
     .lessons {
       grid-row: 5/9;
       grid-gap: 1rem; } }
-  @media (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .lessons {
-      text-align: end; } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      grid-row: 5/9;
+      text-align: left;
+      padding-top: 5rem; } }
+  @media (max-width: 768px) and (orientation: landscape) {
+    .lessons {
+      text-align: end;
+      padding-top: 15rem; } }
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .lessons {
       margin-top: -10%;
       grid-row: 5/11;
@@ -579,6 +656,17 @@ h1 {
       background-repeat: no-repeat;
       background-size: 250%;
       background-position: 70% -5%; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .lessons {
+      grid-row: 3/7;
+      padding-top: 60%; } }
+  @media (max-width: 667px) and (orientation: landscape) {
+    .lessons {
+      padding-top: 10rem; } }
+  @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+    .lessons {
+      grid-row: 4/9;
+      padding-top: 30%; } }
   .lessons__title {
     padding-bottom: 3rem; }
     @media (max-width: 1024px) {
@@ -590,11 +678,15 @@ h1 {
         font-size: 2.9rem;
         padding-top: 2rem;
         width: 80%; } }
-    @media (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
+      .lessons__title::after {
+        width: 80%;
+        margin-right: 20%; } }
+    @media (max-width: 768px) and (orientation: landscape) {
       .lessons__title::after {
         width: 80%;
         margin-left: 20%; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .lessons__title {
         padding-top: 0; }
         .lessons__title::after {
@@ -631,7 +723,7 @@ h1 {
   align-content: center;
   align-items: center;
   padding-left: 5rem; }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .testimonials {
       clip-path: polygon(0 15%, 100% 62%, 100% 100%, 0 100%); } }
   @media (max-height: 768px) and (max-width: 1024px) {
@@ -642,13 +734,21 @@ h1 {
     .testimonials {
       grid-row: 8/ 11;
       clip-path: polygon(0 10%, 100% 50%, 100% 100%, 0 100%); } }
-  @media (max-width: 667px) {
+  @media (max-width: 667px) and (orientation: landscape) {
     .testimonials {
       clip-path: polygon(0 20%, 100% 50%, 100% 100%, 0 100%); } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .testimonials {
       grid-row: 10/ 14;
       clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .testimonials {
+      grid-row: 6/ 9;
+      clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%); } }
+  @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+    .testimonials {
+      grid-row: 7/11;
+      clip-path: polygon(0 20%, 100% 30%, 100% 100%, 0 100%); } }
   .testimonials .section__title {
     width: 100%; }
     .testimonials .section__title::after {
@@ -676,18 +776,28 @@ h1 {
     @media (max-width: 824px) {
       .testimonials__main {
         padding-top: 15%; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .testimonials__main {
         padding-top: 75%; } }
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (orientation: landscape) {
       .testimonials__main {
         padding-top: 20%;
         width: 90%; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .testimonials__main {
         width: 90%;
         padding-top: 0;
         margin-top: 35%; } }
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .testimonials__main {
+        padding-top: 100%; } }
+    @media (max-width: 667px) and (orientation: landscape) {
+      .testimonials__main {
+        width: 85%; } }
+    @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+      .testimonials__main {
+        padding-top: 45%;
+        width: 90%; } }
     .testimonials__main::before {
       content: "\0201c";
       position: absolute;
@@ -716,15 +826,21 @@ h1 {
       @media (max-width: 824px) {
         .testimonials__main::before {
           top: -40%; } }
-      @media (max-height: 1024px) and (max-width: 768px) {
+      @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
         .testimonials__main::before {
           top: 22%; } }
-      @media (max-width: 768px) {
+      @media (max-width: 768px) and (orientation: landscape) {
         .testimonials__main::before {
           top: -20%; } }
-      @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+      @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
         .testimonials__main::before {
           top: -25%; } }
+      @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+        .testimonials__main::before {
+          top: 15%; } }
+      @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+        .testimonials__main::before {
+          top: -10%; } }
   .testimonials__shape {
     float: right;
     width: 100%;
@@ -739,13 +855,13 @@ h1 {
     @media (max-width: 812px) {
       .testimonials__title {
         margin-bottom: 1.5rem; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .testimonials__title {
         margin-bottom: 4rem; } }
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (orientation: landscape) {
       .testimonials__title {
         margin-bottom: 2rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .testimonials__title {
         margin-bottom: 2rem;
         margin-top: 5rem; } }
@@ -757,13 +873,13 @@ h1 {
     @media (min-height: 1024px) and (max-width: 1366px) {
       .testimonials__voice {
         font-size: 2.2rem; } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+    @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
       .testimonials__voice {
         font-size: 2rem; } }
-    @media (max-width: 667px) {
+    @media (max-width: 667px) and (orientation: landscape) {
       .testimonials__voice {
         font-size: 1.7rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .testimonials__voice {
         font-size: 1.7rem; } }
     .testimonials__voice--title {
@@ -780,10 +896,10 @@ h1 {
       @media (max-width: 824px) {
         .testimonials__voice--name {
           padding-top: 1rem; } }
-      @media (max-height: 1024px) and (max-width: 768px) {
+      @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
         .testimonials__voice--name {
           padding-top: 1.5rem; } }
-      @media (max-width: 667px) {
+      @media (max-width: 667px) and (orientation: landscape) {
         .testimonials__voice--name {
           padding-top: 1rem; } }
       .testimonials__voice--name::before {
@@ -841,6 +957,7 @@ h1 {
   clip-path: polygon(0 100%, 100% 0, 100% 100%);
   display: grid;
   grid-template-columns: 50vw 1fr;
+  grid-template-rows: max-content;
   align-items: end;
   justify-items: end;
   justify-content: end;
@@ -851,17 +968,17 @@ h1 {
   text-align: right; }
   @media (min-height: 1024px) and (max-width: 1366px) {
     .contact {
-      grid-row-gap: 10rem; } }
+      grid-row-gap: 5rem; } }
   @media (max-width: 1024px) {
     .contact {
       padding-right: 5rem;
       padding-bottom: 3rem; } }
   @media (max-height: 1366px) and (max-width: 1024px) {
     .contact {
-      grid-template-columns: 40vw 1fr; } }
+      grid-template-columns: 40vw 1fr;
+      grid-row-gap: 5rem; } }
   @media (max-height: 1366px) and (max-width: 1024px) {
     .contact {
-      margin-top: -8vh;
       grid-row-gap: 0;
       padding-top: 10rem;
       padding-bottom: 5rem;
@@ -870,25 +987,43 @@ h1 {
   @media (max-height: 768px) and (max-width: 1024px) {
     .contact {
       grid-row: 9 /11;
-      margin-top: -20vh;
-      grid-template-columns: 60vw 1fr;
-      grid-template-rows: 1fr; } }
+      grid-template-columns: 60vw 1fr; } }
   @media (max-width: 824px) {
     .contact {
-      grid-row: 11/13; } }
-  @media (max-height: 1024px) and (max-width: 768px) {
+      grid-row: 10/13; } }
+  @media (max-width: 812px) {
     .contact {
+      grid-row: 10/13; } }
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
+    .contact {
+      grid-row: 11/13;
       grid-row-gap: 3rem;
       grid-template-columns: 50vw 1fr;
-      padding-top: 17rem;
       padding-bottom: 5rem; } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .contact {
       grid-row: 13/-1;
-      clip-path: polygon(0 80%, 100% 0, 100% 100%, 0 100%);
+      clip-path: polygon(0 78%, 100% 0, 100% 100%, 0 100%);
       grid-row-gap: 2rem;
       background-size: 180%;
-      padding-right: 4.2rem; } }
+      padding-right: 4.2rem;
+      padding-bottom: 3rem; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .contact {
+      grid-row: 9/11;
+      clip-path: polygon(0 5%, 100% 30%, 100% 100%, 0 100%);
+      background-size: 200%;
+      background-position-x: 60%;
+      justify-items: start;
+      padding-left: 5rem;
+      padding-bottom: 3rem;
+      margin-top: 0; } }
+  @media (max-width: 667px) and (orientation: landscape) {
+    .contact {
+      clip-path: polygon(0 100%, 100% 5%, 100% 100%); } }
+  @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+    .contact {
+      grid-row: 11/13; } }
   .contact__main {
     grid-column: 2 /3;
     display: grid;
@@ -906,22 +1041,22 @@ h1 {
         padding-top: 50vh; } }
     @media (max-width: 824px) {
       .contact__main {
-        grid-gap: 3rem;
-        transform: translateY(20%); } }
-    @media (max-height: 1024px) and (max-width: 768px) {
+        grid-gap: 3rem; } }
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .contact__main {
-        transform: translateY(1%); } }
-    @media (max-width: 667px) {
-      .contact__main {
-        transform: translateY(5%); } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
-      .contact__main {
-        transform: translateY(2%);
         grid-gap: 2rem; } }
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .contact__main {
+        grid-column: 1 /-1;
+        text-align: left;
+        grid-gap: 2.5rem; } }
   .contact__title {
     width: 100%; }
     .contact__title::after {
       width: 100%; }
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
+      .contact__title {
+        transform: translateX(10px); } }
   .contact__details {
     color: #fff4c4;
     display: grid;
@@ -933,17 +1068,17 @@ h1 {
     @media (min-height: 1024px) and (max-width: 1366px) {
       .contact__details {
         font-size: 2.3rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .contact__details {
         width: 50%;
-        transform: translateX(85%); } }
+        transform: translateX(90%); } }
   .contact__detail {
     display: grid;
     grid-template-columns: min-content 1fr;
     grid-column-gap: 2rem;
     align-items: end;
     justify-items: end; }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .contact__detail {
         grid-template-columns: max-content 1fr; } }
   .contact__icon {
@@ -954,7 +1089,7 @@ h1 {
       .contact__icon {
         width: 3.5rem;
         height: 3.5rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .contact__icon {
         transform: translateX(8rem); }
         .contact__icon--last {
@@ -968,10 +1103,17 @@ h1 {
     justify-items: end;
     justify-content: end;
     align-content: end; }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .contact__links {
         width: 60%;
         margin-left: 40%; } }
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
+      .contact__links {
+        justify-items: end; } }
+    @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+      .contact__links {
+        justify-items: start;
+        justify-content: start; } }
   .contact__link {
     width: 3rem;
     height: 3rem;
@@ -996,7 +1138,8 @@ h1 {
   justify-self: center;
   align-content: end;
   color: #fff4c4;
-  padding-left: 5rem; }
+  padding-left: 5rem;
+  display: grid; }
   @media (min-height: 1024px) and (max-width: 1366px) {
     .footer {
       grid-column: 2 /3;
@@ -1009,27 +1152,32 @@ h1 {
     .footer {
       grid-column: 1 /2;
       grid-row: 1/-1; } }
-  @media (max-width: 824px) {
-    .footer {
-      transform: translateY(105%); } }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .footer {
       grid-column: 1 /2;
       grid-row: 1/2;
-      transform: translateY(10%);
       padding-left: 0; } }
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (orientation: landscape) {
     .footer {
       justify-self: end; } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .footer {
       grid-column: 2/3;
       grid-row: 2/3;
       width: 100vw; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .footer {
+      grid-column: 1/-1;
+      grid-row: 2/3;
+      justify-self: start; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .footer__logo {
+      display: grid;
+      justify-items: start; } }
   .footer__logo img {
     width: 8rem;
     opacity: .6; }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .footer__logo img {
         width: 5rem; } }
   .footer__copyright {
@@ -1076,20 +1224,38 @@ h1 {
       grid-row: 11/13;
       margin-top: -2%;
       grid-gap: 3rem; } }
-  @media (max-height: 1024px) and (max-width: 768px) {
+  @media (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .fees {
       padding-top: 8%; } }
-  @media (max-width: 768px) {
+  @media (max-width: 768px) and (orientation: landscape) {
     .fees {
       padding-top: 5%;
       grid-gap: 2rem; } }
-  @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+  @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
     .fees {
       grid-row: 13/-1;
       background-position: 50% 0;
       background-size: 400%;
       clip-path: polygon(0 0, 100% 10%, 0 100%);
       padding-top: 10%; } }
+  @media (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
+    .fees {
+      grid-row: 8/10;
+      clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 100%);
+      padding-top: 45%;
+      padding-right: 5rem;
+      justify-items: end;
+      text-align: right;
+      background-size: 270%;
+      background-position-x: 100%;
+      background-position-y: 20%; } }
+  @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+    .fees {
+      grid-row: 10/11;
+      clip-path: polygon(0 45%, 100% 15%, 100% 100%, 0 100%);
+      padding-top: 30%; } }
+  .fees__title::after {
+    width: 100%; }
   .fees__content {
     list-style: none;
     align-self: start; }
@@ -1105,6 +1271,10 @@ h1 {
       .fees__list {
         grid-gap: 1rem;
         font-size: 1.8rem; } }
-    @media (min-height: 731px) and (max-height: 824px) and (max-width: 480px) {
+    @media (min-height: 737px) and (max-height: 824px) and (max-width: 480px) and (orientation: portrait) {
       .fees__list {
         display: block; } }
+    @media (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+      .fees__list {
+        grid-gap: 3rem;
+        font-size: 2rem; } }
