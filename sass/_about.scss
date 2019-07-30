@@ -31,8 +31,11 @@
         margin-top: -2%;
         clip-path: polygon(0 0, 100% 0, 100% 29vh, 0 100%);
     }
+    
+    
     @media #{$ip-port} {
         grid-column: full-start /-1; 
+        background-image: none;
         clip-path: polygon(0 0, 100% 0, 100% 19vh, 0 100%);
         margin-top: -3%;
     }
@@ -56,6 +59,27 @@
         background-size: 130%;
         background-position: 70% 90%;
         background-repeat: no-repeat;
+    }
+    @media #{$lg-phone-port}{
+        grid-row: 2/4;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        
+        background-image: linear-gradient(rgba($color-black-red, .6),  rgba($color-black-red, .9)), url(../image/geoffandBeth-lg.png);
+        background-size: 130%;
+        background-position: 70% 90%;
+        background-repeat: no-repeat;
+        padding: 2rem;
+        margin-top: 10%;
+    }
+    @media #{$sphone-port}{
+        background-image: linear-gradient(rgba($color-green-darkest, .6),  rgba($color-red-darkest, .9)), url(../image/geoffandBeth-lg.png);
+        grid-row: 2/5;
+        background-size: 165%;
+        background-position: 90% 20%;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0 80%);
+
+
+
     }
     
     &__main {
@@ -82,7 +106,9 @@
         @media #{$xlg-phone-port}{
             padding: 20% 2rem 2rem 2rem;
         }
-
+        @media #{$lg-phone-port}{
+            padding: 10% 2rem 2rem 2rem;
+        }
         
 
     }
@@ -132,16 +158,21 @@
             shape-outside: polygon(0 100%, 100% 31%, 100% 100%);
             shape-margin: 4.5rem;
         }
+        
         @media #{$ip-port}{
-            shape-margin: 8rem;
+            shape-margin: 10rem;
+            shape-outside: polygon(0 100%, 100% 40%, 100% 100%);
         }
         @media #{$mphone-land}{
             shape-outside: polygon(0 100%, 100% 70%, 100% 100%);  
         }
-
         @media #{$xlg-phone-port}{
             shape-outside: polygon(0 90%, 100% 70%, 100% 100%, 0 100%);
             shape-margin: 3.5rem;
+        }
+        @media #{$lg-phone-port}{
+            shape-margin: 3rem;
+            shape-outside: polygon(0 100%, 100% 80%, 100% 100%);
         }
 
     }

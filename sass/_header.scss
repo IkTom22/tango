@@ -35,23 +35,30 @@
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
         background-position: 50% 90%;
     }
+    
     @media #{$ip-port}{
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 35vh);
         background-image: linear-gradient(to right, rgba($color-black-darker, .5) 0%, rgba($color-black-red, .5) 60%, rgba($color-red-deep, .9) 60% ),  url(../image/tango-lesson_ipp.jpg);
         @include contain-top-fixed;
         background-size: 120%;
     }
-
     @media #{$mphone-land}{
         clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
         background-position: 50% 90%;
     }
+    
     // @media #{$sphone-land}{
     //     clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 65vh);
     //     background-position: 50% 90%;
     // }
     @media #{$xlg-phone-port}{
         clip-path: polygon(0 0, 100% 0, 100% 49.5vh, 0 39vh);
+        background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 50%, rgba(190, 5, 5, 0.9) 50%), url(../image/tango-lesson_ipp.jpg);
+        background-size: 185%;
+        background-position: 50% 0;
+    }
+    @media #{$lg-phone-port}{
+        clip-path: polygon(0 0, 100% 0, 100% 60vh, 0 45vh);
         background-image: linear-gradient(to right, rgba(0, 8, 7, 0.5) 0%, rgba(10, 0, 2, 0.5) 50%, rgba(190, 5, 5, 0.9) 50%), url(../image/tango-lesson_ipp.jpg);
         background-size: 185%;
         background-position: 50% 0;
@@ -88,10 +95,15 @@
         @media #{$xlg-phone}{
             transform: translate(5%, 45%) rotate(-10deg);
         }
+       
         @media #{$ip-port}{
             transform: translate(5%, 95%) rotate(-15deg);
             font-size: 11rem;
         }
+        @media #{$mphone-land}{
+            transform: translate(5%, 60%) rotate(-15deg);
+        }
+        
         @media #{$sphone-land}{
             transform: translate(5%, 45%) rotate(-15deg);
         }
@@ -101,9 +113,17 @@
             transform: translate(30%, 420%) rotate(0);
             color: rgba($color-beige, .6);
         }
+
+        @media #{$lg-phone-port}{
+            display: none;
+        }
+        @media #{$sphone-land}{
+            font-size: 10rem;
+        }
         @media #{$xs-phone-land}{
             font-size: 9.5rem;
         }
+        
         
     }
     &__mainbox{
@@ -137,6 +157,15 @@
             grid-gap: 1rem;
             top: 5%;
         }
+        @media #{$lg-phone-port}{
+            right: 0;
+            width: 100%;
+            grid-gap: 1rem;
+            top: -5%;
+        }
+        @media #{$sphone-land}{
+            grid-gap: 1rem;
+        }
         
     }
 
@@ -152,6 +181,9 @@
         }
         @media #{$xs-phone-land}{
             width: 9rem;
+        }
+        @media #{$lg-phone-port}{
+            width: 10rem;
         }
 
 

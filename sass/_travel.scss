@@ -41,6 +41,8 @@
         background-size: 89%;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 35%);
     }
+    
+    
     @media #{$ip-port}{
         grid-column: 1/ -1;
         grid-row: 5/7;
@@ -48,11 +50,15 @@
         //background-position-x: 100%;
         background-size: 75%;
         background-position: 140% 25%;
+        display: block;
     }
     @media #{$mphone-land}{
         display: none;
     }
-    // @media #{$xlg-phone-port}{
-    //     display: none;
-    // }
+    @media #{$xlg-phone-port}{
+        display: none;
+    }
+    @media #{$lg-phone-port}{
+        display: none;
+    }
 }

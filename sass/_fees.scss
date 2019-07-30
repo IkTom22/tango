@@ -60,6 +60,23 @@
         clip-path: polygon(0 0, 100% 10%, 0 100%);
         padding-top: 10%;
     }
+
+    @media #{$lg-phone-port}{
+        grid-row: 8/10;
+        clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 100%);
+        padding-top: 45%;
+        padding-right: 5rem;
+        justify-items: end;
+        text-align: right;
+        background-size: 270%;
+        background-position-x: 100%;
+        background-position-y: 20%;
+    }
+    &__title {
+        &::after{
+            width: 100%;
+        }
+    }
     &__content{
         list-style: none;
         align-self: start;
