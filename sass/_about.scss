@@ -77,9 +77,11 @@
         background-size: 165%;
         background-position: 90% 20%;
         clip-path: polygon(0 0, 100% 0, 100% 70%, 0 80%);
-
-
-
+    }
+    @media #{$other-phone-port}{
+        grid-row: 2/6;
+        background-size: 180%;
+        background-position: 90% 30%;
     }
     
     &__main {

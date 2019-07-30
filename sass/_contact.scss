@@ -99,7 +99,10 @@
     @media #{$sphone-port}{
         grid-row: 11/13;
     }
-
+    @media #{$other-phone-port}{
+        grid-row: 15/18;
+        clip-path: polygon(0 10%, 100% 35%, 100% 100%, 0 100%);
+    }
     &__main {
         grid-column: 2 /3;
         display: grid;

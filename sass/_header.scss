@@ -63,6 +63,9 @@
         background-size: 185%;
         background-position: 50% 0;
     }
+    @media #{$other-phone-port}{
+        clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 55vh);
+    }
 
     h3 {
         color: $color-beige;
@@ -123,7 +126,7 @@
         @media #{$xs-phone-land}{
             font-size: 9.5rem;
         }
-        
+
         
     }
     &__mainbox{
@@ -166,6 +169,11 @@
         @media #{$sphone-land}{
             grid-gap: 0;
         }
+
+        @media #{$other-phone-port}{
+            grid-gap: 0;
+        }
+        
         
     }
 

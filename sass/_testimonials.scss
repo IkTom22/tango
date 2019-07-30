@@ -39,7 +39,10 @@
         grid-row: 7/11;
         clip-path: polygon(0 20%, 100% 30%, 100% 100%, 0 100%);
     }
-
+    @media #{$other-phone-port}{
+        clip-path: polygon(0 25%, 100% 35%, 100% 100%, 0 100%);
+        grid-row: 9/15;
+    }
     & .section {  
         &__title {
             width: 100%;
@@ -90,7 +93,9 @@
             padding-top: 45%;
             width: 90%;
         }
-
+        @media #{$other-phone-port}{
+            padding-top: 20%;
+        }
         @include quote;
         &::before {
             font-size: 70rem;

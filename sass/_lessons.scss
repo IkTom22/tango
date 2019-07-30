@@ -58,7 +58,10 @@
         grid-row: 4/9;
         padding-top: 30%;
     }
-
+    @media #{$other-phone-port}{
+        grid-row: 5/11;
+        padding-top: 20%;
+    }
     &__title {
         padding-bottom: 3rem;
 
