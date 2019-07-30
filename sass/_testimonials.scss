@@ -86,6 +86,10 @@
         @media #{$sphone-land}{
             width: 85%;
         }
+        @media #{$sphone-port}{
+            padding-top: 45%;
+            width: 90%;
+        }
 
         @include quote;
         &::before {
@@ -124,6 +128,9 @@
             }
             @media #{$lg-phone-port} {
                 top: 15%; 
+            }
+            @media #{$sphone-port}{
+                top: -10%; 
             }
         }
         position: relative;

@@ -96,6 +96,9 @@
     @media #{$sphone-land}{
         clip-path: polygon(0 100%, 100% 5%, 100% 100%);
     }
+    @media #{$sphone-port}{
+        grid-row: 11/13;
+    }
 
     &__main {
         grid-column: 2 /3;

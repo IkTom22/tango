@@ -72,6 +72,12 @@
         background-position-x: 100%;
         background-position-y: 20%;
     }
+    @media #{$sphone-port}{
+        grid-row: 10/11;
+        clip-path: polygon(0 45%, 100% 15%, 100% 100%, 0 100%);
+        padding-top: 30%;
+    }
+
     &__title {
         &::after{
             width: 100%;
@@ -96,6 +102,10 @@
         }
         @media #{$xlg-phone-port}{
             display: block;
+        }
+        @media #{$sphone-port}{
+            grid-gap: 3rem;
+            font-size: 2rem;
         }
     }   
 }

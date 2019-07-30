@@ -48,7 +48,7 @@ $lg-phone-port:"(max-height: 736px) and (max-width: 480px) and (orientation : po
 $sphone-land: "(max-width: 667px) and (orientation : landscape)";
 $xs-phone-land: "(max-width: 568px) and (orientation : landscape)";
 $sphone-port:"(max-height: 667px) and (max-width: 375px) and (orientation : portrait)";
-$other-phone: "(min-height: 480px) and (max-width: 375px)";
+$other-phone: "(min-height: 480px) and (min-width: 320px)";
 
 
 *,
@@ -115,6 +115,10 @@ body {
     }
     @media #{$lg-phone-port}{
          grid-template-rows: repeat(10, 33vh);;
+    }
+    @media #{$sphone-port}{
+        grid-auto-rows: 33vh;
+        grid-template-rows: repeat(auto-fill, 33vh);
     }
    
     overflow: hidden;
