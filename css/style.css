@@ -57,8 +57,9 @@ body {
       grid-template-rows: repeat(15, 16.5vh); } }
   @media only screen and (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
     .container {
-      grid-template-rows: repeat(10, 33vh); } }
-  @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
+      grid-template-rows: repeat(auto-fill, 33vh);
+      grid-auto-rows: 33vh; } }
+  @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
     .container {
       grid-auto-rows: 33vh;
       grid-template-rows: repeat(auto-fill, 33vh); } }
@@ -323,6 +324,10 @@ h1 {
     @media only screen and (max-width: 568px) and (orientation: landscape) {
       .header__name {
         font-size: 9.5rem; } }
+    @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+      .header__name {
+        font-size: 8rem;
+        transform: translate(5%, 55%) rotate(-15deg); } }
   .header__mainbox {
     display: grid;
     position: absolute;
@@ -467,6 +472,12 @@ h1 {
       background-repeat: no-repeat;
       padding: 2rem;
       margin-top: 10%; } }
+  @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+    .about {
+      grid-row: 3/7;
+      background-size: 121%;
+      clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
+      background-position: 70% 25%; } }
   @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
     .about {
       background-image: linear-gradient(rgba(3, 97, 97, 0.6), rgba(17, 1, 1, 0.9)), url(../image/geoffandBeth-lg.png);
@@ -674,6 +685,10 @@ h1 {
   @media only screen and (max-width: 667px) and (orientation: landscape) {
     .lessons {
       padding-top: 10rem; } }
+  @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+    .lessons {
+      grid-row: 5/12;
+      padding-top: 35%; } }
   @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
     .lessons {
       grid-row: 4/9;
@@ -760,6 +775,10 @@ h1 {
     .testimonials {
       grid-row: 6/ 9;
       clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%); } }
+  @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+    .testimonials {
+      grid-row: 11/ 16;
+      clip-path: polygon(0 5%, 100% 30%, 100% 100%, 0 100%); } }
   @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
     .testimonials {
       grid-row: 7/11;
@@ -813,6 +832,10 @@ h1 {
     @media only screen and (max-width: 667px) and (orientation: landscape) {
       .testimonials__main {
         width: 85%; } }
+    @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+      .testimonials__main {
+        padding-top: 0;
+        width: 90%; } }
     @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
       .testimonials__main {
         padding-top: 45%;
@@ -860,6 +883,9 @@ h1 {
       @media only screen and (max-height: 736px) and (max-width: 480px) and (orientation: portrait) {
         .testimonials__main::before {
           top: 15%; } }
+      @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+        .testimonials__main::before {
+          top: -110%; } }
       @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
         .testimonials__main::before {
           top: -10%; } }
@@ -1043,6 +1069,10 @@ h1 {
   @media only screen and (max-width: 667px) and (orientation: landscape) {
     .contact {
       clip-path: polygon(0 100%, 100% 5%, 100% 100%); } }
+  @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+    .contact {
+      grid-row: 15/19;
+      clip-path: polygon(0 90%, 100% 10%, 100% 100%, 0 100%); } }
   @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
     .contact {
       grid-row: 11/13; } }
@@ -1275,11 +1305,16 @@ h1 {
       background-size: 270%;
       background-position-x: 100%;
       background-position-y: 20%; } }
+  @media only screen and (max-height: 325px) and (max-width: 480px) and (orientation: landscape) {
+    .fees {
+      grid-row: 16 / 18;
+      background-size: 250%;
+      background-position-y: 0; } }
   @media only screen and (max-height: 667px) and (max-width: 375px) and (orientation: portrait) {
     .fees {
-      grid-row: 10/11;
-      clip-path: polygon(0 45%, 100% 15%, 100% 100%, 0 100%);
-      padding-top: 30%; } }
+      clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 100%);
+      grid-row: 10/12;
+      padding-top: 40%; } }
   @media only screen and (max-height: 480px) and (max-width: 325px) and (orientation: portrait) {
     .fees {
       grid-row: 14/16;

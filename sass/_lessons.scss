@@ -54,6 +54,10 @@
     @media #{$sphone-land}{
         padding-top: 10rem;
     }
+    @media #{$other-phone-land}{
+        grid-row: 5/12;
+        padding-top: 35%;
+    }
     @media #{$sphone-port}{
         grid-row: 4/9;
         padding-top: 30%;

@@ -71,6 +71,12 @@
         padding: 2rem;
         margin-top: 10%;
     }
+    @media #{$other-phone-land}{
+        grid-row: 3/7;
+        background-size: 121%;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0 90%);
+        background-position: 70% 25%;
+    }
     @media #{$sphone-port}{
         background-image: linear-gradient(rgba($color-green-darkest, .6),  rgba($color-red-darkest, .9)), url(../image/geoffandBeth-lg.png);
         grid-row: 2/5;

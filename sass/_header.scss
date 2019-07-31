@@ -126,7 +126,10 @@
         @media #{$xs-phone-land}{
             font-size: 9.5rem;
         }
-
+        @media #{$other-phone-land}{
+            font-size: 8rem;
+            transform: translate(5%, 55%) rotate(-15deg);
+        }
         
     }
     &__mainbox{

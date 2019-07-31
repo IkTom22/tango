@@ -35,6 +35,10 @@
         grid-row: 6/ 9;
         clip-path: polygon(0 20%, 100% 40%, 100% 100%, 0 100%);
     }
+    @media #{$other-phone-land}{
+        grid-row: 11/ 16;
+        clip-path: polygon(0 5%, 100% 30%, 100% 100%, 0 100%);
+    }
     @media #{$sphone-port}{
         grid-row: 7/11;
         clip-path: polygon(0 20%, 100% 30%, 100% 100%, 0 100%);
@@ -89,6 +93,10 @@
         @media #{$sphone-land}{
             width: 85%;
         }
+        @media #{$other-phone-land}{
+            padding-top: 0;
+            width: 90%;
+        }
         @media #{$sphone-port}{
             padding-top: 45%;
             width: 90%;
@@ -133,6 +141,9 @@
             }
             @media #{$lg-phone-port} {
                 top: 15%; 
+            }
+            @media #{$other-phone-land}{
+                top: -110%; 
             }
             @media #{$sphone-port}{
                 top: -10%; 

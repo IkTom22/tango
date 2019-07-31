@@ -72,10 +72,16 @@
         background-position-x: 100%;
         background-position-y: 20%;
     }
+
+    @media #{$other-phone-land}{
+        grid-row: 16 / 18;
+        background-size: 250%;
+        background-position-y: 0;
+    }    
     @media #{$sphone-port}{
-        grid-row: 10/11;
-        clip-path: polygon(0 45%, 100% 15%, 100% 100%, 0 100%);
-        padding-top: 30%;
+        clip-path: polygon(0 30%, 100% 15%, 100% 100%, 0 100%);
+        grid-row: 10/12;
+        padding-top: 40%;
     }
     @media #{$other-phone-port}{
         grid-row: 14/16;

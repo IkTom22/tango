@@ -96,6 +96,10 @@
     @media #{$sphone-land}{
         clip-path: polygon(0 100%, 100% 5%, 100% 100%);
     }
+    @media #{$other-phone-land}{
+        grid-row: 15/19;
+        clip-path: polygon(0 90%, 100% 10%, 100% 100%, 0 100%);
+    }
     @media #{$sphone-port}{
         grid-row: 11/13;
     }
