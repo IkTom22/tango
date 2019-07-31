@@ -32,11 +32,11 @@ body {
 
 .container {
   width: 100vw;
-  display: grid;
-  opacity: 0;
+  display: none;
   grid-template-rows: repeat(12, 33vh);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   background-color: #036161;
+  transition: 2s linear;
   overflow: hidden; }
   @media only screen and (max-height: 1366px) and (max-width: 1024px), only screen and (max-height: 1024px) and (max-width: 768px) and (orientation: portrait) {
     .container {
@@ -66,11 +66,11 @@ body {
       grid-template-rows: repeat(auto-fill, 33vh); } }
 
 .show {
-  animation: appearing 2s linear forwards; }
+  display: grid; }
 
 @keyframes appearing {
   100% {
-    opacity: 1; } }
+    display: grid; } }
 
 .heading-1, .heading-2, .heading-3 {
   font-family: "Voltaire", sans-serif; }

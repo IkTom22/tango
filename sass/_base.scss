@@ -89,13 +89,14 @@ body {
 }
 .container {
     width: 100vw;
+    display: none;
     
-    display: grid;
-    opacity:0;
+    // opacity:0;
     //grid-template-rows: 100vh repeat(2, 75vh) 50vh auto;
     grid-template-rows: repeat(12, 33vh);
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
     background-color:$color-green-darkest;  
+    transition: 2s linear;
     @media  #{$ipp-port}, #{$ip-port} {
         grid-template-rows: repeat(12, 16.5vh);
         // grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
@@ -136,10 +137,10 @@ body {
 }
 
 .show {
-    animation: appearing 2s linear forwards;
+     display: grid;
 }
 @keyframes appearing {
     100% {
-        opacity: 1
+        display: grid;
     }
 }
