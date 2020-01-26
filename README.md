@@ -7,6 +7,7 @@ Goals:
 - use SCSS and CSS grid
 - add loading page / use css for loading animation
 - create responsive website
+- add fabvcon
 
 Instructions
 - install npm
