@@ -7,6 +7,7 @@ Goals:
 - use SCSS and CSS grid
 - add loading page / use css for loading animation
 - create responsive website
+- prefix an compress all SCSS into CSS file
 - use SVG icons
 - add fabvcon
 
